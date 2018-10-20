@@ -8,33 +8,33 @@
     switch(tileType){
     //grass
     case 1:
-        currentTile.imageString=;
+        currentTile.imageString= "grass.bmp";
         currentTile.=;
         currentTile.indexWeight= 1;
         currentTile.tileName= "grass";
     break;
-    //water
+    //flower
     case 2:
-        currentTile.imageString=;
-        currentTile.tileName= "water";
+        currentTile.imageString= "flower.bmp";
+        currentTile.tileName= "flower";
         currentTile.indexWeight= 1000;
     break;
     //lava
     case 3:
-        currentTile.imageString=;
+        currentTile.imageString= "lava.bmp";
         currentTile.tileName= "lava";
         currentTile.indexWeight= 10000000;
     break;
-    //ice
+    //wood
     case 4:
-        currentTile.imageString=;
-        currentTile.tileName= "ice";
+        currentTile.imageString= "wood.bmp";
+        currentTile.tileName= "wood";
         currentTile.indexWeight= 0;
     break;
-    //sand
+    //stone
     case 5:
-        currentTile.imageString=;
-        currentTile.tileName= "sand";
+        currentTile.imageString= "stone.bmp";
+        currentTile.tileName= "stone";
         currentTile.indexWeight= 2;
     break;
     return currentTile;
