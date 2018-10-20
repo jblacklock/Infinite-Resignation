@@ -46,6 +46,12 @@
 			<Add directory="game_engine/external_libraries/SDL2_ttf-2.0.14/lib" />
 			<Add directory="game_engine/external_libraries/SDL2-2.0.8/lib" />
 		</Linker>
+		<Unit filename="Map.cpp" />
+		<Unit filename="Map.h" />
+		<Unit filename="Tile.cpp" />
+		<Unit filename="Tile.h" />
+		<Unit filename="TileFactory.cpp" />
+		<Unit filename="TileFactory.h" />
 		<Unit filename="game/include/assetHandler.h" />
 		<Unit filename="game/src/assetHandler.cpp" />
 		<Unit filename="game_engine/include/GameObject.h" />
