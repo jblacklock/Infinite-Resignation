@@ -14,6 +14,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="game/include" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,6 +25,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="game/include" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -49,13 +51,15 @@
 			<Add directory="game_engine/external_libraries/SDL2-2.0.8/lib" />
 		</Linker>
 		<Unit filename="game/include/Map.h" />
-		<Unit filename="game/include/Tile Factory.h" />
 		<Unit filename="game/include/Tile.h" />
+		<Unit filename="game/include/TileFactory.h" />
 		<Unit filename="game/include/assetHandler.h" />
+		<Unit filename="game/include/mapFileReader.h" />
 		<Unit filename="game/src/Map.cpp" />
-		<Unit filename="game/src/Tile Factory.cpp" />
 		<Unit filename="game/src/Tile.cpp" />
+		<Unit filename="game/src/TileFactory.cpp" />
 		<Unit filename="game/src/assetHandler.cpp" />
+		<Unit filename="game/src/mapFileReader.cpp" />
 		<Unit filename="game_engine/include/GameObject.h" />
 		<Unit filename="game_engine/include/Media.h" />
 		<Unit filename="game_engine/include/Vector2D.h" />
