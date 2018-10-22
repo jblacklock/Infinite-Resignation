@@ -6,7 +6,6 @@ class Map
 {
     public:
         Map();
-        virtual ~Map();
 
     protected:
 
