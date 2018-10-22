@@ -4,12 +4,13 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
-#include <SDL.h>
-#include <SDL_image.h>
-#include "assetHandler.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include "AssetHandler.h"
 #include "WindowProperty.h"
+#include "GUI/kiss_sdl.h"
 
-
+/** Made by the singular entity known as Lazer (Github:Lazer7) */
 class Window
 {
     public:
@@ -19,13 +20,12 @@ class Window
         void handleEvents();
         void render();
         void update();
-        bool running(){return isRunning;}
+        bool running(){return WindowProperty::isRunning;}
         void loadMedia(std:: string);
         void capFrameRate(int);
-
+        void stop(){WindowProperty::isRunning = false;}
     private:
-        assetHandler asset;
-        bool isRunning;
+        AssetHandler asset;
 };
 
 #endif // WINDOW_H
