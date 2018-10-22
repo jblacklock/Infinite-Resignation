@@ -1,10 +1,17 @@
 #ifndef TILE_H
 #define TILE_H
 #include <string>
+#include <SDL2/SDL.h>
 
 class Tile
 {
     public:
+        //what parameters should this take???
+        void renderTile();
+
+    protected:
+
+    private:
         //name of BMP file
         const char* imageString;
         //actual name of tile
@@ -18,13 +25,6 @@ class Tile
         SDL_Rect srcrect;
         SDL_Rect dstrect;
         SDL_Texture *texture;
-
-        //what parameters should this take???
-        void renderTile();
-
-    protected:
-
-    private:
 };
 
 #endif // TILE_H

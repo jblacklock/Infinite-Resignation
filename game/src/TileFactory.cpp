@@ -1,9 +1,9 @@
 #include "Map.h"
 #include "TileFactory.h"
-#include "Tile.h"
+
 
 //My hope is that this is the syntax for having the factory return a reference to a tile object
-*Tile TileFactory::TileFactory( int tileType, int xPos, int yPos )
+Tile* TileFactory::CreateTile( int tileType, int xPos, int yPos )
 {
     Tile currentTile= new Tile;
     currentTile.x= xPos;
