@@ -7,7 +7,7 @@ Tile::~Tile()
     //dtor
 }
 
-void Tile::init(std::string name, int x , int y, int h, int w, int weight){
+void Tile::init(std::string name, int x , int y, float h, float w, int weight){
     this->x = x;
     this->y = y;
     this->w = w;
@@ -35,5 +35,8 @@ void Tile::render(){
 }
 
 void Tile::update(){
-
+    this->dstRect.h = ceil(h*WindowProperty::getHeightDisposition());
+    this->dstRect.w = ceil(w*WindowProperty::getWidthDisposition());
+    this->dstRect.x = ceil(((float)x) * WindowProperty::getWidthDisposition());
+    this->dstRect.y = ceil(((float)y)* WindowProperty::getHeightDisposition());
 }

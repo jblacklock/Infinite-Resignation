@@ -800,8 +800,9 @@
 1539753117 c:\users\lenovo\documents\github\infinite-resignation\game_engine\include\vector2d.h
 	<iostream>
 
-1540177291 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\assethandler.cpp
+1540193283 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\assethandler.cpp
 	"assetHandler.h"
+	"Tile.h"
 
 1540177291 c:\users\lenovo\documents\github\infinite-resignation\game\include\assethandler.h
 	<list>
@@ -1226,7 +1227,7 @@
 1539753117 source:c:\users\lenovo\documents\github\infinite-resignation\game_engine\src\media.cpp
 	"Media.h"
 
-1539753117 source:c:\users\lenovo\documents\github\infinite-resignation\game_engine\src\window.cpp
+1540187565 source:c:\users\lenovo\documents\github\infinite-resignation\game_engine\src\window.cpp
 	"Window.h"
 
 1539753117 source:c:\users\lenovo\documents\github\infinite-resignation\game_engine\src\windowproperty.cpp
@@ -1679,5 +1680,15 @@
 	"WindowProperty.h"
 
 1540185714 source:d:\code\c++ projects\infinite-resignation\game\src\tile.cpp
+	"Tile.h"
+
+1540193283 c:\users\lenovo\documents\github\infinite-resignation\game\include\tile.h
+	<stdio.h>
+	<string.h>
+	"SDL.h"
+	"SDL_image.h"
+	"WindowProperty.h"
+
+1540193615 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\tile.cpp
 	"Tile.h"
 
