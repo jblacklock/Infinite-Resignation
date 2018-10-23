@@ -16,12 +16,12 @@ Map::Map(int mapID, int Rows, int Columns)
     }
     }
 
-    for(int v = 0; v < Rows; v++){
-    for(int k = 0; k < Columns; k++){
-        cout << myArray[v][k]<< "";
-    }
-    cout << endl;
-    }
+    //for(int v = 0; v < Rows; v++){
+    //for(int k = 0; k < Columns; k++){
+    //    cout << myArray[v][k]<< "";
+    //}
+    //cout << endl;
+    //}
      //Rows = MapGenerator::determineRows(1);
      //Columns = MapGenerator::determineColumns(1);
         //for (int i = 0; i < 10; i++) {
