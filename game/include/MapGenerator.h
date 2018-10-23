@@ -8,7 +8,7 @@ class MapGenerator
     public:
         //MapGenerator();
         //virtual ~MapGenerator();
-        //static Tile[][] generateMap(int mapID);
+        //static int[][] generateMap(int mapID, int Rows, int Columns);
         static int determineColumns(int mapID);
         static int determineRows(int mapID);
 

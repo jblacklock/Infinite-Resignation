@@ -2,10 +2,12 @@
 #include "Tile.h"
 #include "TileFactory.h"
 #include "MapGenerator.h"
+#include "Map.h"
 
 Tile q[10][15];
 int Rows;
 int Columns;
+
 //Tile x;
 /**
     Initializes all Assets in the Game
@@ -14,15 +16,16 @@ int Columns;
 void assetHandler::init(){
 
  Rows = MapGenerator::determineRows(1);
- Columns = MapGenerator.determineColumns(1);
-//Tile q[Rows][Columns] = MapGenerator.generateMap(1);
+ Columns = MapGenerator::determineColumns(1);
+ //int q[][] = MapGenerator.generateMap(1, Rows, Columns);
+Map* level = new Map(1, Rows, Columns);
 
  //setWindowProperty(300,300,float,float,int,bool);
     for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 15; j++) {
-            int xWidth = 50;
-            int yHeight = 50;
-            int xDisplacement = i*xWidth;
+      for (int j = 0; j < 15; j++) {
+          int xWidth = 50;
+          int yHeight = 50;
+         int xDisplacement = i*xWidth;
             int yDisplacement = j*yHeight;
             q[i][j].init("assets/images/grass.bmp", xDisplacement, yDisplacement, xWidth, yHeight, 1000);
     }
@@ -65,4 +68,5 @@ void assetHandler::render(){
     Handles Key Events for game objects
 */
 void assetHandler::keyEventHandler(){
+
 }
