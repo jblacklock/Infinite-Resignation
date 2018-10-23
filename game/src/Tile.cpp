@@ -1,4 +1,6 @@
 #include "Tile.h"
+#include <iostream>
+using namespace std;
 
 Tile::~Tile()
 {
@@ -8,6 +10,11 @@ Tile::~Tile()
 }
 
 void Tile::init(std::string name, int x , int y, float h, float w, int weight){
+       cout<<"New Tile Coming in!" << endl;
+
+        cout<<"this is your name:";
+    cout<<name << endl;
+
     this->x = x;
     this->y = y;
     this->w = w;

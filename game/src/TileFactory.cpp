@@ -5,9 +5,13 @@
 //Tile* TileFactory::CreateTile( int tileType, int xPos, int yPos )
 void TileFactory::CreateTile( int tileType, int xPos, int yPos )
 {
-    //Tile currentTile;
+    Tile currentTile;
     //currentTile.x= xPos;
     //currentTile.y= yPos;
+       int xWidth = 50;
+          int yHeight = 50;
+
+    //q[i][j].init("assets/images/grass.bmp", xDisplacement, yDisplacement, xWidth, yHeight, 1000);
 
     //currentTile.height= height of window/10
     //currentTile.width= width of window/15
@@ -15,70 +19,93 @@ void TileFactory::CreateTile( int tileType, int xPos, int yPos )
     //the following are example titles
     //grass
     case 1:
-        //currentTile.init("assets/images/grass.bmp", xDisplacement, yDisplacement, xWidth, yHeight, 1000);
+        currentTile.init("assets/images/BLpuddleEdge.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
+        currentTile.update();
     break;
     case 2:
-        //currentTile.init();
+        currentTile.init("assets/images/BRpuddleEdge.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 3:
-        //currentTile.init();
+        currentTile.init("assets/images/grass.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 4:
-        //currentTile.init();
+        currentTile.init("assets/images/LRBpuddleEdge.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 5:
-        //currentTile.init();
+        currentTile.init("assets/images/LRTpuddleEdge.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 6:
-        //currentTile.init();
+        currentTile.init("assets/images/sand.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 7:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass1.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 8:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass2.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 9:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass3.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 10:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass4.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 11:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass5.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 12:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass6.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 13:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass7.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 14:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass8.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 15:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass9.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 16:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass10.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 17:
-        //currentTile.init();
+        currentTile.init("assets/images/sandGrass11.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 18:
-        //currentTile.init();
+        currentTile.init("assets/images/TBpuddleEdge.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 19:
-        //currentTile.init();
+        currentTile.init("assets/images/TBRpuddleEdge.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 20:
-        //currentTile.init();
+        currentTile.init("assets/images/TLpuddleEdge.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 21:
-        //currentTile.init();
+        currentTile.init("assets/images/TRpuddleEdge.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     case 22:
-        //currentTile.init();
+        currentTile.init("assets/images/water.bmp", xPos, yPos, xWidth, yHeight, 1);
+        currentTile.render();
     break;
     //return currentTile;
     return;

@@ -3,6 +3,7 @@
 #include <stdio.h>
 using namespace std;
 #include <iostream>
+#include "TileFactory.h"
 
 Map::Map(int mapID, int Rows, int Columns)
 {
@@ -16,12 +17,17 @@ Map::Map(int mapID, int Rows, int Columns)
     }
     }
 
-    //for(int v = 0; v < Rows; v++){
-    //for(int k = 0; k < Columns; k++){
-    //    cout << myArray[v][k]<< "";
-    //}
-    //cout << endl;
-    //}
+    for(int v = 0; v < Rows; v++){
+    for(int k = 0; k < Columns; k++){
+            int xWidth = 50;
+            int yHeight = 50;
+            int xDisplacement = v*xWidth;
+            int yDisplacement = k*yHeight;
+            int whatever = myArray[v][k];
+            TileFactory::CreateTile( whatever, xDisplacement, yDisplacement );
+            //q[i][j].init("assets/images/grass.bmp", xDisplacement, yDisplacement, xWidth, yHeight, 1000);
+    }
+    }
      //Rows = MapGenerator::determineRows(1);
      //Columns = MapGenerator::determineColumns(1);
         //for (int i = 0; i < 10; i++) {
