@@ -18,8 +18,8 @@ void Tile::init(std::string name, int x , int y, float h, float w, int weight){
     this->sprite = SDL_CreateTextureFromSurface(WindowProperty::renderer, tempSurface);
     SDL_FreeSurface(tempSurface);
 
-    this->srcRect.h = 16;
-    this->srcRect.w = 16;
+    this->srcRect.h = 64;
+    this->srcRect.w = 64;
     this->dstRect.h = h;
     this->dstRect.w = w;
 
