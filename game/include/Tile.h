@@ -16,6 +16,8 @@ class Tile
         void update();
 
     private:
+        int numberOfTiles;
+
         int x;
         int y;
         float h;

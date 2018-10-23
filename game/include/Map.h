@@ -11,6 +11,7 @@ class Map
     protected:
 
     private:
+
         //int[][] tileArray;
 };
 
