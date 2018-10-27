@@ -1,4 +1,4 @@
-#include "assetHandler.h"
+#include "AssetHandler.h"
 #include "GameObject.h"
 #include <iostream>
 using namespace std;
@@ -7,27 +7,27 @@ GameObject ahri;
     Initializes all Assets in the Game
     TODO:: Refactor to place all characters in a vector
 */
-void assetHandler::init(){
+void AssetHandler::init(){
     ahri.addComponent<TransformComponent>(200,200,40,39);
     ahri.addComponent<SpriteRenderer>("assets/images/sprites/ahri.png",39,39,0,3,30);
 }
 /**
     Update function to call each asset's update function
 */
-void assetHandler::update(){
+void AssetHandler::update(){
     ahri.update();
 }
 /**
     Render function to draw the game object to the screen
 */
 
-void assetHandler::render(){
+void AssetHandler::render(){
     ahri.render();
 }
 /**
     Handles Key Events for game objects
 */
-void assetHandler::keyEventHandler(){
+void AssetHandler::keyEventHandler(){
     if(WindowProperty::event.type == SDL_KEYDOWN){
         int x = ahri.getComponent<TransformComponent>().x();
         int y = ahri.getComponent<TransformComponent>().y();

@@ -1,29 +1,29 @@
-#include "assetHandler.h"
+#include "AssetHandler.h"
 
 /**
     Initializes all Assets in the Game
     TODO:: Refactor to place all characters in a vector
 */
-void assetHandler::init(){
+void AssetHandler::init(){
     music.init("assets/audio/Blessing.mp3");
     music.play();
 }
 /**
     Update function to call each asset's update function
 */
-void assetHandler::update(){
+void AssetHandler::update(){
 
 }
 /**
     Render function to draw the game object to the screen
 */
 
-void assetHandler::render(){
+void AssetHandler::render(){
 }
 /**
     Handles Key Events for game objects
 */
-void assetHandler::keyEventHandler(){
+void AssetHandler::keyEventHandler(){
 }
 
 

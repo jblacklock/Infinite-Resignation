@@ -6,10 +6,10 @@
 #include "WindowProperty.h"
 
 
-class assetHandler
+class AssetHandler
 {
     public:
-        assetHandler(){};
+        AssetHandler(){};
         void init();
         void update();
         void render();

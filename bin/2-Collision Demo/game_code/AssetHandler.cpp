@@ -1,4 +1,4 @@
-#include "assetHandler.h"
+#include "AssetHandler.h"
 #include "GameObject.h"
 #include <iostream>
 using namespace std;
@@ -10,7 +10,7 @@ bool hasCollided = false;
     Initializes all Assets in the Game
     TODO:: Refactor to place all characters in a vector
 */
-void assetHandler::init(){
+void AssetHandler::init(){
     ahri.addComponent<TransformComponent>(200,200,40,39);
     ahri.addComponent<SpriteRenderer>("assets/images/sprites/ahri.png",39,39,0,3,30);
     ahri.addComponent<ColliderComponent>("Ahri");
@@ -21,7 +21,7 @@ void assetHandler::init(){
 /**
     Update function to call each asset's update function
 */
-void assetHandler::update(){
+void AssetHandler::update(){
     ahri.update();
     wall.update();
     if(ahri.getComponent<ColliderComponent>().collision(wall.getComponent<ColliderComponent>())){
@@ -40,7 +40,7 @@ void assetHandler::update(){
     Render function to draw the game object to the screen
 */
 
-void assetHandler::render(){
+void AssetHandler::render(){
     ahri.render();
     wall.render();
     if(hasCollided){
@@ -50,7 +50,7 @@ void assetHandler::render(){
 /**
     Handles Key Events for game objects
 */
-void assetHandler::keyEventHandler(){
+void AssetHandler::keyEventHandler(){
     if(WindowProperty::event.type == SDL_KEYDOWN){
         switch(WindowProperty::event.key.keysym.sym){
             case SDLK_a:

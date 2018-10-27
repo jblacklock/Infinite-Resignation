@@ -1,4 +1,4 @@
-#include "assetHandler.h"
+#include "AssetHandler.h"
 #include "list"
 #include "PlayableCharacter.h"
 kiss_button button ={0};
@@ -9,7 +9,7 @@ int i = 4;
     Initializes all Assets in the Game
     TODO:: Refactor to place all characters in a vector
 */
-void assetHandler::init(){
+void AssetHandler::init(){
     char* message = "HELLO";
     kiss_label_new(&label,&WindowProperty::window,message,0,0);
     kiss_button_new(&button,&WindowProperty::window, "MORE AHRI!",200,100,150,50);
@@ -19,7 +19,7 @@ void assetHandler::init(){
 /**
     Update function to call each asset's update function
 */
-void assetHandler::update(){
+void AssetHandler::update(){
     button.rect.h = 50*WindowProperty::getHeightDisposition();
     button.rect.w = 150*WindowProperty::getWidthDisposition();
     button.rect.x = 200*WindowProperty::getWidthDisposition();
@@ -40,7 +40,7 @@ void assetHandler::update(){
     Render function to draw the game object to the screen
 */
 
-void assetHandler::render(){
+void AssetHandler::render(){
     kiss_button_draw(&button, WindowProperty::renderer);
     kiss_label_draw(&label,WindowProperty::renderer);
     list<PlayableCharacter>::iterator it;
@@ -51,7 +51,7 @@ void assetHandler::render(){
 /**
     Handles Key Events for game objects
 */
-void assetHandler::keyEventHandler(){
+void AssetHandler::keyEventHandler(){
     int draw = 0;
     int quit = 0;
     button_event(&button, &WindowProperty::event, &draw, &quit);
@@ -61,7 +61,7 @@ void assetHandler::keyEventHandler(){
     }
 }
 
-void assetHandler::button_event(kiss_button *button, SDL_Event *e, int *draw,
+void AssetHandler::button_event(kiss_button *button, SDL_Event *e, int *draw,
                   int *quit)
 {
     if (kiss_button_event(button, e, draw)){
