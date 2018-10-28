@@ -35,7 +35,6 @@ Window::Window() {
         asset.init();
         // Load Loading Screen
         while( 2000>(SDL_GetTicks()-frameStart)&& WindowProperty::isRunning)this->loadingScreen();
-
     }
     else{
         printf( "SDL could not initialize! SDL_Error: %s\n", SDL_GetError() );
