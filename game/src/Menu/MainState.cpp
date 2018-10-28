@@ -2,19 +2,24 @@
 kiss_label title = {0};
 kiss_button startButton = {0};
 kiss_button exitButton = {0};
+GameObject logo;
 int h,w;
 MainState::MainState()
 {
     this->Title = "  Infinite\nResignation";
     kiss_label_new(&title,&WindowProperty::window,Title,75,10);
-    kiss_button_new(&startButton,&WindowProperty::window, "Start!",175,250,150,50);
-    kiss_button_new(&exitButton,&WindowProperty::window, "Exit",175,310,150,50);
+    title.textcolor={255, 255, 255, 255};
+    kiss_button_new(&startButton,&WindowProperty::window, "Start!",175,380,150,50);
+    kiss_button_new(&exitButton,&WindowProperty::window, "Exit",175,440,150,50);
     startButton.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
     exitButton.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
     startButton.textx -=10;
     exitButton.textx -=10;
     h = title.rect.h;
     w = title.rect.w;
+    logo.addComponent<TransformComponent>(175,175,150,150);
+    logo.addComponent<SpriteRenderer>("assets/images/menu/Flag_Rock.png",424,409,0,6,60);
+
 }
 
 MainState::~MainState()
@@ -29,12 +34,14 @@ void MainState::update(){
     title.font.lineheight = 75 * WindowProperty::getHeightDisposition();
     title.rect.x = 75 * ceil(WindowProperty::getWidthDisposition());
     title.rect.y = 10* ceil(WindowProperty::getHeightDisposition());
+    logo.update();
 }
 
 void MainState::render(){
     kiss_button_draw(&startButton, WindowProperty::renderer);
     kiss_button_draw(&exitButton, WindowProperty::renderer);
     kiss_label_draw(&title,WindowProperty::renderer);
+    logo.render();
 }
 
 void MainState::handleEvent(){

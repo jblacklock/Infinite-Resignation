@@ -181,6 +181,8 @@ int kiss_button_draw(kiss_button *button, SDL_Renderer *renderer)
 	else if (button->prelight && !button->active){
 		kiss_renderimage_precise(renderer, button->prelightimg,
 			button->rect.x, button->rect.y, button->rect.w,button->rect.h);
+			kiss_rendertext(renderer, button->text, button->textx, button->texty,
+		button->font, button->textcolor);
 	}
 	else{
 		kiss_renderimage_precise(renderer, button->normalimg, button->rect.x,

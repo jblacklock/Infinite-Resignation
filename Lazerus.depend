@@ -1686,7 +1686,7 @@
 1540685905 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_posix.c
 	"kiss_sdl.h"
 
-1540698460 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_widgets.c
+1540706251 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_widgets.c
 	"kiss_sdl.h"
 
 1540687839 source:d:\code\c++ projects\infinite-resignation\game_engine\main.cpp
@@ -1724,11 +1724,19 @@
 
 1540686911 d:\code\c++ projects\infinite-resignation\game\include\menu\menustate.h
 
-1540705470 d:\code\c++ projects\infinite-resignation\game\include\menu\mainstate.h
+1540716216 d:\code\c++ projects\infinite-resignation\game\include\menu\mainstate.h
 	<string>
 	"WindowProperty.h"
 	"MenuState.h"
+	"GameObject.h"
+	"components/Components.h"
 
-1540706046 source:d:\code\c++ projects\infinite-resignation\game\src\menu\mainstate.cpp
+1540716452 source:d:\code\c++ projects\infinite-resignation\game\src\menu\mainstate.cpp
 	"MainState.h"
+
+1540685905 d:\code\c++ projects\infinite-resignation\game_engine\include\gameobject.h
+	<iostream>
+	<string>
+	"components/ComponentManager.h"
+	<typeinfo>
 

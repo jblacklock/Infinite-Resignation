@@ -3,7 +3,8 @@
 #include <string>
 #include "WindowProperty.h"
 #include "MenuState.h"
-
+#include "GameObject.h"
+#include "components/Components.h"
 class MainState : public MenuState
 {
     public:
