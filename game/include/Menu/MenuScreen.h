@@ -1,6 +1,7 @@
 #ifndef MENUSCREEN_H
 #define MENUSCREEN_H
 #include "Menu/MenuState.h"
+#include "MainState.h"
 #include "WindowProperty.h"
 class MenuScreen
 {

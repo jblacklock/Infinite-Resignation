@@ -1235,7 +1235,7 @@
 1539753117 source:c:\users\lenovo\documents\github\infinite-resignation\game_engine\src\windowproperty.cpp
 	"WindowProperty.h"
 
-1540687623 source:d:\code\c++ projects\infinite-resignation\game\src\assethandler.cpp
+1540700397 source:d:\code\c++ projects\infinite-resignation\game\src\assethandler.cpp
 	"AssetHandler.h"
 	"Menu/MenuScreen.h"
 
@@ -1686,7 +1686,7 @@
 1540685905 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_posix.c
 	"kiss_sdl.h"
 
-1540685905 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_widgets.c
+1540698460 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_widgets.c
 	"kiss_sdl.h"
 
 1540687839 source:d:\code\c++ projects\infinite-resignation\game_engine\main.cpp
@@ -1708,18 +1708,27 @@
 1540111529 source:d:\code\c++ projects\infinite-resignation\game_engine\src\vector2d.cpp
 	"Vector2D.h"
 
-1540687401 source:d:\code\c++ projects\infinite-resignation\game_engine\src\window.cpp
+1540705801 source:d:\code\c++ projects\infinite-resignation\game_engine\src\window.cpp
 	"Window.h"
 
-1540685905 source:d:\code\c++ projects\infinite-resignation\game_engine\src\windowproperty.cpp
+1540690006 source:d:\code\c++ projects\infinite-resignation\game_engine\src\windowproperty.cpp
 	"WindowProperty.h"
 
-1540687687 source:d:\code\c++ projects\infinite-resignation\game\src\menu\menuscreen.cpp
+1540705817 source:d:\code\c++ projects\infinite-resignation\game\src\menu\menuscreen.cpp
 	"Menu/MenuScreen.h"
 
-1540687312 d:\code\c++ projects\infinite-resignation\game\include\menu\menuscreen.h
+1540700424 d:\code\c++ projects\infinite-resignation\game\include\menu\menuscreen.h
 	"Menu/MenuState.h"
+	"MainState.h"
 	"WindowProperty.h"
 
 1540686911 d:\code\c++ projects\infinite-resignation\game\include\menu\menustate.h
+
+1540705470 d:\code\c++ projects\infinite-resignation\game\include\menu\mainstate.h
+	<string>
+	"WindowProperty.h"
+	"MenuState.h"
+
+1540706046 source:d:\code\c++ projects\infinite-resignation\game\src\menu\mainstate.cpp
+	"MainState.h"
 

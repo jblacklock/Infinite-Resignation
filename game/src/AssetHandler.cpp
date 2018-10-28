@@ -26,6 +26,6 @@ void AssetHandler::render(){
     Handles Key Events for game objects
 */
 void AssetHandler::keyEventHandler(){
-
+    menu.handleEvent();
 }
 
