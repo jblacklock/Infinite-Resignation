@@ -31,6 +31,21 @@ void MainState::update(){
     title.font.lineheight = 75 * WindowProperty::getHeightDisposition();
     title.rect.x = 75 * ceil(WindowProperty::getWidthDisposition());
     title.rect.y = 10* ceil(WindowProperty::getHeightDisposition());
+
+    startButton.rect.h = 50*WindowProperty::getHeightDisposition();
+    startButton.rect.w = 150*WindowProperty::getWidthDisposition();
+    startButton.rect.x = 175*WindowProperty::getWidthDisposition();
+    startButton.rect.y = 380*WindowProperty::getHeightDisposition();
+    startButton.textx = 220 *WindowProperty::getWidthDisposition();
+    startButton.texty = 385 *WindowProperty::getHeightDisposition();
+    startButton.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20*diag);
+    exitButton.rect.h = 50*WindowProperty::getHeightDisposition();
+    exitButton.rect.w = 150*WindowProperty::getWidthDisposition();
+    exitButton.rect.x = 175*WindowProperty::getWidthDisposition();
+    exitButton.rect.y = 440*WindowProperty::getHeightDisposition();
+    exitButton.textx = 220 *WindowProperty::getWidthDisposition();
+    exitButton.texty = 445 *WindowProperty::getHeightDisposition();
+    exitButton.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20*diag);
     logo.update();
 }
 

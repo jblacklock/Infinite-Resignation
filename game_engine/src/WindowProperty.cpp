@@ -32,7 +32,6 @@ bool WindowProperty::init() {
 void WindowProperty::setWindowProperty(WindowValue scale) {
     FileManager::write("data/WindowScreen.dat",scale);
     windowValue=scale;
-    printf("WINDOW VALUES %d %d\n",windowValue.height, windowValue.width);
 }
 /**
     Set Window Properties with scale values
