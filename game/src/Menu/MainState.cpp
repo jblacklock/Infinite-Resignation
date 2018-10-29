@@ -1,12 +1,9 @@
 #include "MainState.h"
-kiss_label title = {0};
-kiss_button startButton = {0};
-kiss_button exitButton = {0};
-GameObject logo;
-int h,w;
-MainState::MainState()
+
+MainState::MainState(MenuScreen* menu)
 {
     this->Title = "  Infinite\nResignation";
+    this->menu = menu;
     kiss_label_new(&title,&WindowProperty::window,Title,75,10);
     title.textcolor={255, 255, 255, 255};
     kiss_button_new(&startButton,&WindowProperty::window, "Start!",175,380,150,50);
@@ -53,3 +50,4 @@ void MainState::handleEvent(){
         WindowProperty::isRunning = false;
     }
 }
+

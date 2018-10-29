@@ -5,6 +5,7 @@
 #include "WindowProperty.h"
 class MenuScreen
 {
+
     public:
         MenuScreen() = default;
         virtual ~MenuScreen();
@@ -12,11 +13,11 @@ class MenuScreen
         void update();
         void render();
         void handleEvent();
-
+        void changeState(MenuState*);
     protected:
 
     private:
-        MenuState* current;
+        class MenuState* current;
 };
 
 #endif // MENUSCREEN_H

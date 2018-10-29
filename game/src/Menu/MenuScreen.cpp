@@ -7,7 +7,7 @@ MenuScreen::~MenuScreen()
 }
 
 void MenuScreen::init(){
-    this->current = new MainState();
+    this->current = new MainState(this);
 }
 
 void MenuScreen::render()
@@ -23,4 +23,8 @@ void MenuScreen::update()
 void MenuScreen::handleEvent()
 {
     this->current->handleEvent();
+}
+
+void MenuScreen::changeState(MenuState* state){
+    this->current = state;
 }
