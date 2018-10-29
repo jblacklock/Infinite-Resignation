@@ -23,6 +23,8 @@ class MainState : public MenuState
         kiss_label title = {0};
         kiss_button startButton = {0};
         kiss_button exitButton = {0};
+        kiss_button characterButton = {0};
+        kiss_button creditsButton = {0};
         GameObject logo;
         int h,w;
 };
