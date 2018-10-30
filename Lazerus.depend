@@ -1724,15 +1724,16 @@
 
 1540792917 d:\code\c++ projects\infinite-resignation\game\include\menu\menustate.h
 
-1540851577 d:\code\c++ projects\infinite-resignation\game\include\menu\mainstate.h
+1540853170 d:\code\c++ projects\infinite-resignation\game\include\menu\mainstate.h
 	<string>
 	"WindowProperty.h"
 	"MenuState.h"
 	"GameObject.h"
 	"components/Components.h"
 	"MenuScreen.h"
+	"CharacterState.h"
 
-1540850540 source:d:\code\c++ projects\infinite-resignation\game\src\menu\mainstate.cpp
+1540853204 source:d:\code\c++ projects\infinite-resignation\game\src\menu\mainstate.cpp
 	"MainState.h"
 
 1540685905 d:\code\c++ projects\infinite-resignation\game_engine\include\gameobject.h
@@ -1740,4 +1741,11 @@
 	<string>
 	"components/ComponentManager.h"
 	<typeinfo>
+
+1540853240 d:\code\c++ projects\infinite-resignation\game\include\menu\characterstate.h
+	"MenuScreen.h"
+	<MenuState.h>
+
+1540853231 source:d:\code\c++ projects\infinite-resignation\game\src\menu\characterstate.cpp
+	"CharacterState.h"
 

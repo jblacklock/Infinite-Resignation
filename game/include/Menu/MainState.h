@@ -6,7 +6,7 @@
 #include "GameObject.h"
 #include "components/Components.h"
 #include "MenuScreen.h"
-
+#include "CharacterState.h"
 class MenuScreen;
 class MainState : public MenuState
 {
@@ -16,7 +16,6 @@ class MainState : public MenuState
         void update();
         void render();
         void handleEvent();
-        void setMenu(MenuScreen menu);
     private:
         MenuScreen* menu;
         char* Title;

@@ -48,10 +48,12 @@
 			<Add directory="game_engine/external_libraries/SDL2/lib/ttf_lib" />
 		</Linker>
 		<Unit filename="game/include/AssetHandler.h" />
+		<Unit filename="game/include/Menu/CharacterState.h" />
 		<Unit filename="game/include/Menu/MainState.h" />
 		<Unit filename="game/include/Menu/MenuScreen.h" />
 		<Unit filename="game/include/Menu/MenuState.h" />
 		<Unit filename="game/src/AssetHandler.cpp" />
+		<Unit filename="game/src/Menu/CharacterState.cpp" />
 		<Unit filename="game/src/Menu/MainState.cpp" />
 		<Unit filename="game/src/Menu/MenuScreen.cpp" />
 		<Unit filename="game_engine/Main.cpp" />

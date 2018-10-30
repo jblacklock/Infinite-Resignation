@@ -86,6 +86,12 @@ void MainState::handleEvent(){
     if(kiss_button_event(&startButton,&WindowProperty::event,&draw)){
         printf("CLICKED");
     }
+    if(kiss_button_event(&characterButton,&WindowProperty::event,&draw)){
+        this->menu->changeState(new CharacterState(this->menu));
+    }
+    if(kiss_button_event(&creditsButton,&WindowProperty::event,&draw)){
+        printf("CLICKED");
+    }
     if(kiss_button_event(&exitButton,&WindowProperty::event,&draw)){
         WindowProperty::isRunning = false;
     }
