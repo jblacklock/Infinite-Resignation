@@ -8,7 +8,8 @@ class TileFactory
         //TileFactory();
         //virtual ~TileFactory();
         //static Tile* CreateTile( int tileType, int xPos, int yPos );
-        static void CreateTile( int tileType, int xPos, int yPos );
+        static Tile CreateTile( int tileType, int xPos, int yPos );
+        static std::string getTileName( int tileType );
 
     protected:
 

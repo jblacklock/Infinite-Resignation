@@ -15,10 +15,10 @@ void Tile::init(std::string name, int x , int y, float h, float w, int weight){
     numberOfTiles++;
        //cout<<numberOfTiles << endl;
 
-        cout<<"this is your xValue:";
-    cout<<x << endl;
-    cout<<"this is your yValue:";
-    cout<<y << endl;
+    //    cout<<"this is your xValue:";
+    //cout<<x << endl;
+    //cout<<"this is your yValue:";
+    //cout<<y << endl;
 
     this->x = x;
     this->y = y;

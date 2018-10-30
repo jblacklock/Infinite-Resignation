@@ -800,7 +800,7 @@
 1539753117 c:\users\lenovo\documents\github\infinite-resignation\game_engine\include\vector2d.h
 	<iostream>
 
-1540285287 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\assethandler.cpp
+1540871604 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\assethandler.cpp
 	"assetHandler.h"
 	"Tile.h"
 	"TileFactory.h"
@@ -1692,11 +1692,11 @@
 	"SDL_image.h"
 	"WindowProperty.h"
 
-1540330807 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\tile.cpp
+1540333087 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\tile.cpp
 	"Tile.h"
 	<iostream>
 
-1540254515 c:\users\lenovo\documents\github\infinite-resignation\game\include\tilefactory.h
+1540350256 c:\users\lenovo\documents\github\infinite-resignation\game\include\tilefactory.h
 	"Tile.h"
 
 1540281502 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\mapgenerator.cpp
@@ -1707,13 +1707,15 @@
 1540281502 c:\users\lenovo\documents\github\infinite-resignation\game\include\mapgenerator.h
 	"Tile.h"
 
-1540330359 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\tilefactory.cpp
+1540350256 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\tilefactory.cpp
 	"TileFactory.h"
 	"Tile.h"
+	<iostream>
 
-1540330498 c:\users\lenovo\documents\github\infinite-resignation\game\include\map.h
+1540869126 c:\users\lenovo\documents\github\infinite-resignation\game\include\map.h
+	"Tile.h"
 
-1540330693 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\map.cpp
+1540881868 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\map.cpp
 	"Map.h"
 	<fstream>
 	<stdio.h>
