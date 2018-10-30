@@ -6,7 +6,7 @@ using namespace std;
 
 
 
-        int MapGenerator::determineColumns(int mapID){
+    int MapGenerator::determineColumns(int mapID){
     int number_of_columns = 0;
     //std::string line;
     std::string mapNum = std::to_string(mapID);
@@ -32,7 +32,6 @@ using namespace std;
     std::ifstream myfile(mapToRead);
     while (!myfile.eof()){
         std::getline(myfile,line);
-        printf("%s/n",line);
         number_of_lines++;
     }
     return number_of_lines;

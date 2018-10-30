@@ -7,14 +7,11 @@ using namespace std;
 //Tile* TileFactory::CreateTile( int tileType, int xPos, int yPos )
 Tile TileFactory::CreateTile( int tileType, int xPos, int yPos )
 {
-    cout<< "how many times are you in here?" << endl;
     Tile currentTile;
     std::string tileName;
     int weight;
     //currentTile.x= xPos;
     //currentTile.y= yPos;
-       int xWidth = 50;
-        int yHeight = 50;
 
 
     //q[i][j].init("assets/images/grass.bmp", xDisplacement, yDisplacement, xWidth, yHeight, 1000);
@@ -158,13 +155,8 @@ Tile TileFactory::CreateTile( int tileType, int xPos, int yPos )
     //return currentTile;
     }
 
-    cout<< "this is the tile name: " <<tileName<<endl;
-    cout<< "this is the tile xDisplacement: " <<xPos<<endl;
-    cout<< "this is the tile yDisplacement: " <<yPos<<endl;
-    cout<< "this is the tile width: " <<xWidth<<endl;
-    cout<< "this is the tile height: " <<yHeight<<endl;
-    cout<< "this is the tile weight: " <<weight<<endl;
     //currentTile.init(tileName, xPos, yPos, xWidth, yHeight, weight);
+    currentTile.init(tileName,xPos,yPos,50,50,weight);
     return currentTile;
 }
 
