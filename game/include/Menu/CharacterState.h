@@ -15,6 +15,7 @@ class CharacterState : public MenuState
     protected:
 
     private:
+        MenuScreen* menu;
 };
 
 #endif // CHARACTERSTATE_H

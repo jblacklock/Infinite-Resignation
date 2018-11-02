@@ -41,7 +41,7 @@ void MainState::update(){
     startButton.rect.w = 150*WindowProperty::getWidthDisposition();
     startButton.rect.x = 100*WindowProperty::getWidthDisposition();
     startButton.rect.y = 380*WindowProperty::getHeightDisposition();
-    startButton.textx = 150 *WindowProperty::getWidthDisposition();
+    startButton.textx = 135 *WindowProperty::getWidthDisposition();
     startButton.texty = 385 *WindowProperty::getHeightDisposition();
     startButton.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20*diag);
 
@@ -58,7 +58,7 @@ void MainState::update(){
     characterButton.rect.w = 150*WindowProperty::getWidthDisposition();
     characterButton.rect.x = 100*WindowProperty::getWidthDisposition();
     characterButton.rect.y = 440*WindowProperty::getHeightDisposition();
-    characterButton.textx = 120 *WindowProperty::getWidthDisposition();
+    characterButton.textx = 110 *WindowProperty::getWidthDisposition();
     characterButton.texty = 445 *WindowProperty::getHeightDisposition();
     characterButton.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20*diag);
 
