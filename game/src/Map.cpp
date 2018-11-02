@@ -10,8 +10,6 @@ Map::Map(int mapID, int Rows, int Columns)
 {
     rows = Rows;
     columns = Columns;
-
-
     std::string mapNum = std::to_string(mapID);
     std::string mapToRead = "assets/maps/mapNumber" + mapNum + ".txt";
     std::ifstream myfile(mapToRead);
@@ -19,7 +17,6 @@ Map::Map(int mapID, int Rows, int Columns)
     for(int i = 0; i < rows; i++){
     for(int j = 0; j < columns; j++){
     myfile >> myArray[i][j];
-
     }
     tileArray = new Tile*[Columns];
     for(int i = 0; i< Columns; ++i){
@@ -49,6 +46,7 @@ Map::~Map()
 {
     //dtor
 }
+
 
 void Map::renderMap(){
  for(int v = 0; v < rows; v++){

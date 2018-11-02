@@ -4,7 +4,9 @@
 using namespace std;
 
 
+
         int MapGenerator::determineColumns(int mapID){
+
     int number_of_columns = 0;
     //std::string line;
     std::string mapNum = std::to_string(mapID);

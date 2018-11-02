@@ -17,7 +17,6 @@ void Tile::init(std::string name, int x , int y, int h, int w, int weight){
     this->w = w;
     this->h = h;
     this->weight = weight;
-
     SDL_Surface* tempSurface = SDL_LoadBMP(name.c_str());
     this->sprite = SDL_CreateTextureFromSurface(WindowProperty::renderer, tempSurface);
     SDL_FreeSurface(tempSurface);
