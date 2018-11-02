@@ -11,17 +11,15 @@ class Tile
     public:
         Tile() = default;
         virtual ~Tile();
-        void init(std::string name, int x, int y, float h, float w, int weight);
+        void init(std::string name, int x, int y, int h, int w, int weight);
         void render();
         void update();
 
     private:
-        int numberOfTiles;
-
         int x;
         int y;
-        float h;
-        float w;
+        int h;
+        int w;
         int weight;
 
         SDL_Rect srcRect,dstRect;

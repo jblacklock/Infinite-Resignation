@@ -7,7 +7,6 @@ class Map
     public:
         Map()= default;
         Map(int mapID, int Rows, int Columns);
-        void renderMap(Map*& level, int& Rows, int& Columns);
         void renderMap();
         virtual ~Map();
 

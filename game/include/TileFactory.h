@@ -5,9 +5,6 @@
 class TileFactory
 {
     public:
-        //TileFactory();
-        //virtual ~TileFactory();
-        //static Tile* CreateTile( int tileType, int xPos, int yPos );
         static Tile CreateTile( int tileType, int xPos, int yPos );
         static std::string getTileName( int tileType );
 
