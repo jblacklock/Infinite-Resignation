@@ -13,7 +13,6 @@ int Columns;
     TODO:: Refactor to place all characters in a vector
 */
 void assetHandler::init(){
- int whatever = 0;
  Rows = MapGenerator::determineRows(1);
  Columns = MapGenerator::determineColumns(1);
   cout<< Rows << " is the number of rows"<< endl;
@@ -33,7 +32,7 @@ void assetHandler::update(){
 
 void assetHandler::render(){
     level->renderMap();
-
+}
 /**
     Handles Key Events for game objects
 */

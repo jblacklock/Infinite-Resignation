@@ -9,6 +9,7 @@ Tile TileFactory::CreateTile( int tileType, int xPos, int yPos )
     Tile currentTile;
     std::string tileName;
     int weight;
+    int xWidth =50, yHeight = 50;
     //currentTile.x= xPos;
     //currentTile.y= yPos;
 

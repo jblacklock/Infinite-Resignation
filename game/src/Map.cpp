@@ -15,12 +15,14 @@ Map::Map(int mapID, int Rows, int Columns)
     std::ifstream myfile(mapToRead);
     int myArray[Rows][Columns];
     for(int i = 0; i < rows; i++){
-    for(int j = 0; j < columns; j++){
-    myfile >> myArray[i][j];
+        for(int j = 0; j < columns; j++){
+            myfile >> myArray[i][j];
+        }
     }
+
     tileArray = new Tile*[Columns];
     for(int i = 0; i< Columns; ++i){
-         tileArray[i] = new Tile[Rows];
+        tileArray[i] = new Tile[Rows];
     }
 
     //Tile tileArray[Rows][Columns];

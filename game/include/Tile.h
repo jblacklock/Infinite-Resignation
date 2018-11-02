@@ -8,22 +8,22 @@
 
 class Tile
 {
-    public:
-        Tile() = default;
-        virtual ~Tile();
-        void init(std::string name, int x, int y, int h, int w, int weight);
-        void render();
-        void update();
+public:
+    Tile() = default;
+    virtual ~Tile();
+    void init(std::string name, int x, int y, int h, int w, int weight);
+    void render();
+    void update();
 
-    private:
-        int x;
-        int y;
-        int h;
-        int w;
-        int weight;
+private:
+    int x;
+    int y;
+    int h;
+    int w;
+    int weight;
 
-        SDL_Rect srcRect,dstRect;
-        SDL_Texture* sprite;
+    SDL_Rect srcRect,dstRect;
+    SDL_Texture* sprite;
 
 };
 
