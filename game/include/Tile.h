@@ -14,6 +14,10 @@ public:
     void init(std::string name, int x, int y, int h, int w, int weight);
     void render();
     void update();
+    int getX();
+    int getY();
+    int getH();
+    int getW();
 
 private:
     int x;

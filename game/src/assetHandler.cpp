@@ -15,8 +15,6 @@ int Columns;
 void assetHandler::init(){
  Rows = MapGenerator::determineRows(1);
  Columns = MapGenerator::determineColumns(1);
-  cout<< Rows << " is the number of rows"<< endl;
- cout<< Columns << " is the number of columns"<< endl;
  level = new Map(1, Rows, Columns);
 
 }

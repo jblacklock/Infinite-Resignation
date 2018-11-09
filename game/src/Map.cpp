@@ -40,8 +40,6 @@ Map::Map(int mapID, int Rows, int Columns)
             printf("Current %d %d\n",v, k);
         }
     }
-
-            return;
 }
 
 Map::~Map()
@@ -53,8 +51,12 @@ Map::~Map()
 void Map::renderMap(){
  for(int v = 0; v < rows; v++){
     for(int k = 0; k < columns; k++){
+            //cout << "This is the height: " << tileArray[v][k].getH(); << endl;
+            //cout << "This is the width: " << tileArray[v][k].getW(); << endl;
+            //cout << "This is the x: " << tileArray[v][k].getX(); << endl;
+            //cout << "This is the y: " << tileArray[v][k].getY(); << endl;
             tileArray[v][k].render();
-    }
+        }
     }
 
 }

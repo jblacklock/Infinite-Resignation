@@ -10,6 +10,7 @@ Tile::~Tile()
     //dtor
 }
 
+
 void Tile::init(std::string name, int x , int y, int h, int w, int weight){
 
     this->x = x;
