@@ -16,7 +16,6 @@ void assetHandler::init(){
 
     Rows = MapGenerator::determineRows(1);
     Columns = MapGenerator::determineColumns(1);
-    std::cout << "Columns: "<< Columns <<std::endl;
     level = new Map(1, Rows, Columns);
 }
 /**

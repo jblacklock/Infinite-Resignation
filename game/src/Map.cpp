@@ -27,99 +27,16 @@ Map::Map(int mapID, int Rows, int Columns)
         int h=50;
         int type;
         myfile >> type;
+        ///this value being const might be a problem later
         char* tileName;
         int weight;
-        switch(type)
-        {
-        case 10:
-            tileName = "assets/images/BLpuddleEdge.png";
-            weight = 2;
-            break;
-        case 11:
-            tileName = "assets/images/grass.png";
-            weight = 2;
-            break;
-    case 12:
-        tileName = "assets/images/grass.png";
-        weight = 1;
-    break;
-    case 13:
-        tileName = "assets/images/LRBpuddleEdge.png";
-        weight = 1;
-    break;
-    case 14:
-        tileName = "assets/images/LRTpuddleEdge.png";
-        weight = 1;
-    break;
-    case 15:
-        tileName = "assets/images/sand.png";
-        weight = 1;
-    break;
-    case 16:
-        tileName = "assets/images/sandGrass1.png";
-        weight = 1;
-    break;
-    case 17:
-        tileName = "assets/images/sandGrass2.png";
-        weight = 1;
-    break;
-    case 18:
-        tileName = "assets/images/sandGrass3.png";
-        weight = 1;
-    break;
-    case 19:
-        tileName = "assets/images/sandGrass4.png";
-        weight = 1;
-    break;
-    case 20:
-        tileName = "assets/images/sandGrass5.png";
-        weight = 1;
-    break;
-    case 21:
-        tileName = "assets/images/sandGrass6.png";
-        weight = 1;
-    break;
-    case 22:
-        tileName = "assets/images/sandGrass7.png";
-        weight = 1;
-    break;
-    case 23:
-        tileName = "assets/images/sandGrass8.png";
-        weight = 1;
-    break;
-    case 24:
-        tileName = "assets/images/sandGrass9.png";
-        weight = 1;
-    break;
-    case 25:
-        tileName = "assets/images/sandGrass10.png";
-        weight = 1;
-    break;
-    case 26:
-        tileName = "assets/images/sandGrass11.png";
-        weight = 1;
-    break;
-    case 27:
-        tileName = "assets/images/TBpuddleEdge.png";
-        weight = 1;
-    break;
-    case 28:
-        tileName = "assets/images/TBRpuddleEdge.png";
-        weight = 1;
-    break;
-    case 29:
-        tileName = "assets/images/TLpuddleEdge.png";
-        weight = 1;
-    break;
-    case 30:
-        tileName = "assets/images/TRpuddleEdge.png";
-        weight = 1;
-    break;
-    case 31:
-        tileName = "assets/images/water.png";
-        weight = 1;
-    break;
-        }
+        std::string temporaryString;
+
+        std::string s = std::to_string(type);
+
+        temporaryString = "assets/images/" + s + "tile.png";
+        tileName = &temporaryString[0];
+
 
         x *= i;
         y *= j;
