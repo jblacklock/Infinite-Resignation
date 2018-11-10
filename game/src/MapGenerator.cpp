@@ -8,7 +8,6 @@ using namespace std;
         int MapGenerator::determineColumns(int mapID){
 
     int number_of_columns = 0;
-    //std::string line;
     std::string mapNum = std::to_string(mapID);
     std::string mapToRead = "assets/maps/mapNumber" + mapNum + ".txt";
     std::ifstream myfile(mapToRead);

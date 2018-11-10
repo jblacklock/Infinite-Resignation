@@ -8,7 +8,6 @@
 using namespace std;
 
 Map::Map(int mapID, int Rows, int Columns)
-//Map::Map()
 {
     int rows = Rows;
     int columns = Columns;
@@ -16,10 +15,7 @@ Map::Map(int mapID, int Rows, int Columns)
     std::string mapToRead = "assets/maps/mapNumber" + mapNum + ".txt";
     ifstream myfile(mapToRead);
     Tile myArray[Rows*Columns];
-    //for(int i = 0; i < rows*columns; i++){
-    //for(int j = 0; j < columns; j++){
-    //    myfile >> myArray[i][j];
-    //}
+
     int i=0,j=0;
     while (!myfile.eof())
     {
@@ -139,27 +135,6 @@ Map::Map(int mapID, int Rows, int Columns)
 
     }
 
-    //tileArray = new Tile*[Columns];
-    //for(int i = 0; i< Columns; ++i){
-    //    tileArray[i] = new Tile[Rows];
-    //}
-
-    ///the single line below was commented out already before the others
-    //Tile tileArray[Rows][Columns];
-    //printf("Rows %d Columns %d\n",Rows,Columns);
-    //for(int v = 0; v < rows; v++)
-    //{
-    //    for(int k = 0; k < columns; k++)
-    //   {
-    //        int xWidth = 50;
-    //        int yHeight = 50;
-    //        int xDisplacement = v*xWidth;
-    //        int yDisplacement = k*yHeight;
-    //        int whatever = myArray[v][k];
-    //        tileArray[v][k] = TileFactory::CreateTile( whatever, xDisplacement, yDisplacement );
-    //         printf("Current %d %d\n",v, k);
-    //    }
-    //}
 }
 
 //Map::~Map()
@@ -175,19 +150,8 @@ void Map::render()
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         it->render();
-        //*it.getComponent.render();
-//        it->next();
-    }
 
-//for(int v = 0; v < rows; v++){
-    //  for(int k = 0; k < columns; k++){
-    //cout << "This is the height: " << tileArray[v][k].getH(); << endl;
-    //cout << "This is the width: " << tileArray[v][k].getW(); << endl;
-    //cout << "This is the x: " << tileArray[v][k].getX(); << endl;
-    //cout << "This is the y: " << tileArray[v][k].getY(); << endl;
-    //          tileArray[v][k].render();
-    //      }
-    //  }
+    }
 
 }
 
@@ -205,8 +169,6 @@ void Map::updateTile()
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         it->update();
-        //*it.getComponent.render();
-//        it->next();
     }
 
 }
