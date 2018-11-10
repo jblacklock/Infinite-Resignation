@@ -107,7 +107,7 @@ Tile TileFactory::CreateTile( int tileType, int xPos, int yPos )
     break;
     }
 
-    currentTile.init(tileName, xPos, yPos, xWidth, yHeight, weight);
+    //currentTile.init(tileName, xPos, yPos, xWidth, yHeight, weight);
 
     return currentTile;
 }

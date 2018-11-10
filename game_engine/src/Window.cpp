@@ -34,7 +34,7 @@ Window::Window() {
             this->isRunning = false;
         }
         int frameStart = SDL_GetTicks();
-        while( 2000>(SDL_GetTicks()-frameStart)&& isRunning)this->loadingScreen();
+        //while( 2000>(SDL_GetTicks()-frameStart)&& isRunning)this->loadingScreen();
         asset.init();
     }
     else{
