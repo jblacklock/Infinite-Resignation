@@ -16,6 +16,7 @@ Map::Map(int mapID, int Rows, int Columns)
     ifstream myfile(txtFileToRead);
     ///what did the below line do?
     //Tile myArray[Rows*Columns];
+    int tileCount = 0;
 
     int i=0,j=0;
     while (!myfile.eof())
@@ -119,10 +120,13 @@ Map::Map(int mapID, int Rows, int Columns)
         weight = 1;
     break;
         }
+
         x *= i;
         y *= j;
 
-        if(i==Columns - 1){
+    tileCount++;
+
+        if(i==columns-1){
             i=0;
             j++;
         }
@@ -133,7 +137,6 @@ Map::Map(int mapID, int Rows, int Columns)
     currentTile.init(tileName, x, y, w, h);
 
     tiles.push_back(currentTile);
-
     }
 
 }

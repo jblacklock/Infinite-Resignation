@@ -13,13 +13,22 @@ using namespace std;
     std::ifstream myfile(mapToRead);
     std::string sLine;
     getline(myfile, sLine);
-    //this next set of lines is potentially buggy: it actually only counts the number of spaces and adds one
-    //this will be a liability later
-    for( int iLoop( 0 ); iLoop < ( sizeof( sLine ) / sizeof( sLine[ 0 ] ) ); iLoop++ )
-		if( sLine[ iLoop ] == ' ' ){
-			number_of_columns++;
-		}
-		number_of_columns++;
+    ///this next set of lines is potentially buggy: it actually only counts the number of spaces and adds one
+    ///this will be a liability later
+    //for( int iLoop( 0 ); iLoop < ( sizeof( sLine ) / sizeof( sLine[ 0 ] ) ); iLoop++ )
+		//if( sLine[ iLoop ] == ' ' ){
+			//number_of_columns++;
+
+		//}
+		//number_of_columns++;
+		istringstream ss(sLine);
+		int num;
+    while(ss >> num)
+    {
+        number_of_columns++;
+    }
+
+    ///
     return number_of_columns;
         }
 
