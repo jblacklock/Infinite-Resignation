@@ -11,10 +11,11 @@ Map::Map(int mapID, int Rows, int Columns)
 {
     int rows = Rows;
     int columns = Columns;
-    std::string mapNum = std::to_string(mapID);
-    std::string mapToRead = "assets/maps/mapNumber" + mapNum + ".txt";
-    ifstream myfile(mapToRead);
-    Tile myArray[Rows*Columns];
+    std::string mapNumber = std::to_string(mapID);
+    std::string txtFileToRead = "assets/maps/mapNumber" + mapNumber + ".txt";
+    ifstream myfile(txtFileToRead);
+    ///what did the below line do?
+    //Tile myArray[Rows*Columns];
 
     int i=0,j=0;
     while (!myfile.eof())

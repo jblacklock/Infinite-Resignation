@@ -4,7 +4,6 @@
 #include "MapGenerator.h"
 #include "Map.h"
 
-
 Map* level;
 int Rows;
 int Columns;
