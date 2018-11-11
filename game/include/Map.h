@@ -13,7 +13,10 @@ class Map
         void render();
         void eventHandle();
         void updateTile();
-
+        void moveTilesUp(int distanceUp);
+        void moveTilesDown(int distanceDown);
+        void moveTilesRight(int distanceRight);
+        void moveTilesLeft(int distanceLeft);
 
     protected:
 

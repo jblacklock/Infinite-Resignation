@@ -7,6 +7,8 @@
 #include "components/Components.h"
 using namespace std;
 
+SDL_Event e;
+
 Map::Map(int mapID, int Rows, int Columns)
 {
     int rows = Rows;
@@ -80,6 +82,29 @@ void Map::eventHandle()
 ///to be implemented
 ///if((x<10)||(x>490)||(y<10)||(y>490))
 ///change the x and y of all the tiles in the map
+std::cout<< "Here" <<endl;
+ while( SDL_PollEvent( &e ) != 0 )
+                {
+std::cout<< "There" <<endl;
+                    switch(e.key.keysym.sym){
+                    case SDLK_w:
+                        moveTilesUp(1);
+                        std::cout<< "w" <<endl;
+                    break;
+                     case SDLK_a:
+                        moveTilesLeft(1);
+                        std::cout<< "a" <<endl;
+                    break;
+                     case SDLK_s:
+                        moveTilesDown(1);
+                        std::cout<< "s" <<endl;
+                    break;
+                     case SDLK_d:
+                        moveTilesRight(1);
+                        std::cout<< "d" <<endl;
+                        break;
+                    }
+}
 }
 
 void Map::updateTile()
@@ -91,4 +116,41 @@ void Map::updateTile()
         it->update();
     }
 
+}
+
+void Map::moveTilesUp(int distanceUp){
+
+     std::list<Tile>::iterator it;
+    for(it = tiles.begin(); it!=tiles.end(); ++it)
+    {
+        int height= it->getH();
+        it->setY(distanceUp*(-height));
+    }
+}
+
+void Map::moveTilesDown(int distanceDown){
+     std::list<Tile>::iterator it;
+    for(it = tiles.begin(); it!=tiles.end(); ++it)
+    {
+        int height= it->getH();
+        it->setY(distanceDown*(height));
+    }
+}
+
+void Map::moveTilesRight(int distanceRight){
+     std::list<Tile>::iterator it;
+    for(it = tiles.begin(); it!=tiles.end(); ++it)
+    {
+        int width= it->getW();
+        it->setX(distanceRight*(width));
+    }
+}
+
+void Map::moveTilesLeft(int distanceLeft){
+     std::list<Tile>::iterator it;
+    for(it = tiles.begin(); it!=tiles.end(); ++it)
+    {
+        int width= it->getW();
+        it->setX(distanceLeft*(-width));
+    }
 }

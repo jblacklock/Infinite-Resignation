@@ -26,10 +26,15 @@ public:
     ///event handler will eventually have to be incorporated
     //void eventHandler();
     /// the following code is vestigial
-    //int getX();
-    //int getY();
-    //int getH();
-    //int getW();
+    int getX();
+    int getY();
+    int getH();
+    int getW();
+    void setX(int movHori);
+    void setY(int movVert);
+    void setH(int newHeight);
+    void setW(int newWidth);
+
 
 private:
     int x;

@@ -32,3 +32,39 @@ void Tile::render(){
 void Tile::update(){
     GameObject::update();
 }
+
+int Tile::getX(){
+return this->x;
+}
+
+int Tile::getY(){
+return this->y;
+}
+
+int Tile::getW(){
+return this->w;
+}
+
+int Tile::getH(){
+return this->h;
+}
+
+void Tile::setX(int movHori){
+    this->x = (movHori*(this->w));
+    return;
+}
+
+void Tile::setY(int movVert){
+    this->y = (movVert*(this->h));
+    return;
+    }
+
+void Tile::setW(int newWidth){
+    this->w = newWidth;
+    return;
+    }
+
+void Tile::setH(int newHeight){
+    this->h = newHeight;
+    return;
+    }
