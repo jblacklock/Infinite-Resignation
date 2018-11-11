@@ -82,29 +82,7 @@ void Map::eventHandle()
 ///to be implemented
 ///if((x<10)||(x>490)||(y<10)||(y>490))
 ///change the x and y of all the tiles in the map
-std::cout<< "Here" <<endl;
- while( SDL_PollEvent( &e ) != 0 )
-                {
-std::cout<< "There" <<endl;
-                    switch(e.key.keysym.sym){
-                    case SDLK_w:
-                        moveTilesUp(1);
-                        std::cout<< "w" <<endl;
-                    break;
-                     case SDLK_a:
-                        moveTilesLeft(1);
-                        std::cout<< "a" <<endl;
-                    break;
-                     case SDLK_s:
-                        moveTilesDown(1);
-                        std::cout<< "s" <<endl;
-                    break;
-                     case SDLK_d:
-                        moveTilesRight(1);
-                        std::cout<< "d" <<endl;
-                        break;
-                    }
-}
+
 }
 
 void Map::updateTile()
