@@ -37,7 +37,6 @@ Map::Map(int mapID, int Rows, int Columns)
         temporaryString = "assets/images/" + s + "tile.png";
         tileName = &temporaryString[0];
 
-
         x *= i;
         y *= j;
 
