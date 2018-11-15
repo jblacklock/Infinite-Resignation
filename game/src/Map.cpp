@@ -85,16 +85,60 @@ void Map::eventHandle()
     if(WindowProperty::event.type == SDL_KEYDOWN){
                     switch(WindowProperty::event.key.keysym.sym){
                     case SDLK_w:
-                        moveTilesUp(1);
+                        {
+                            bool canMoveUp = false;
+                            std::list<Tile>::iterator it;
+                            for(it = tiles.begin(); it!=tiles.end(); ++it)
+                            {
+                                int t = it->getComponent<TransformComponent>().position.y;
+                                if(t<0){canMoveUp = true; break;}
+                            }
+                        //if one of the tiles have a y value less than 0
+                        if(canMoveUp ==true ){moveTilesUp(1);}
+                        }
                     break;
                      case SDLK_a:
-                        moveTilesLeft(1);
+                                                 {
+                            bool canMoveLeft = false;
+                            std::list<Tile>::iterator it;
+                            for(it = tiles.begin(); it!=tiles.end(); ++it)
+                            {
+                                int t = it->getComponent<TransformComponent>().position.x;
+                                if(t<0){canMoveLeft = true; break;}
+                            }
+                        //if one of the tiles have a y value less than 0
+                        if(canMoveLeft ==true ){moveTilesLeft(1);}
+                        }
+                         //if one of the tiles have a x value less than 0
+                        //moveTilesLeft(1);
                     break;
                      case SDLK_s:
-                        moveTilesDown(1);
+                         {
+                                                         bool canMoveDown = false;
+                            std::list<Tile>::iterator it;
+                            for(it = tiles.begin(); it!=tiles.end(); ++it)
+                            {
+                                int t = it->getComponent<TransformComponent>().position.y;
+                                if(t>450){canMoveDown = true; break;}
+                            }
+                        //if one of the tiles have a y value less than 0
+                        if(canMoveDown == true ){moveTilesDown(1);}
+                         }
+                        //moveTilesDown(1);
                     break;
                      case SDLK_d:
-                        moveTilesRight(1);
+                                                  {
+                                                         bool canMoveRight = false;
+                            std::list<Tile>::iterator it;
+                            for(it = tiles.begin(); it!=tiles.end(); ++it)
+                            {
+                                int t = it->getComponent<TransformComponent>().position.x;
+                                if(t>450){canMoveRight = true; break;}
+                            }
+                        //if one of the tiles have a y value less than 0
+                        if(canMoveRight == true ){moveTilesRight(1);}
+                         }
+                        //moveTilesRight(1);
                     break;
                     }
     }
