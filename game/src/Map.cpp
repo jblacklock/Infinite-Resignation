@@ -93,12 +93,11 @@ void Map::eventHandle()
                                 int t = it->getComponent<TransformComponent>().position.y;
                                 if(t<0){canMoveUp = true; break;}
                             }
-                        //if one of the tiles have a y value less than 0
                         if(canMoveUp ==true ){moveTilesUp(1);}
                         }
                     break;
                      case SDLK_a:
-                                                 {
+                        {
                             bool canMoveLeft = false;
                             std::list<Tile>::iterator it;
                             for(it = tiles.begin(); it!=tiles.end(); ++it)
@@ -106,39 +105,32 @@ void Map::eventHandle()
                                 int t = it->getComponent<TransformComponent>().position.x;
                                 if(t<0){canMoveLeft = true; break;}
                             }
-                        //if one of the tiles have a y value less than 0
                         if(canMoveLeft ==true ){moveTilesLeft(1);}
                         }
-                         //if one of the tiles have a x value less than 0
-                        //moveTilesLeft(1);
                     break;
                      case SDLK_s:
                          {
-                                                         bool canMoveDown = false;
+                            bool canMoveDown = false;
                             std::list<Tile>::iterator it;
                             for(it = tiles.begin(); it!=tiles.end(); ++it)
                             {
                                 int t = it->getComponent<TransformComponent>().position.y;
                                 if(t>450){canMoveDown = true; break;}
                             }
-                        //if one of the tiles have a y value less than 0
                         if(canMoveDown == true ){moveTilesDown(1);}
                          }
-                        //moveTilesDown(1);
                     break;
                      case SDLK_d:
-                                                  {
-                                                         bool canMoveRight = false;
+                            {
+                            bool canMoveRight = false;
                             std::list<Tile>::iterator it;
                             for(it = tiles.begin(); it!=tiles.end(); ++it)
                             {
                                 int t = it->getComponent<TransformComponent>().position.x;
                                 if(t>450){canMoveRight = true; break;}
                             }
-                        //if one of the tiles have a y value less than 0
                         if(canMoveRight == true ){moveTilesRight(1);}
                          }
-                        //moveTilesRight(1);
                     break;
                     }
     }
