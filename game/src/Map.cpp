@@ -82,7 +82,22 @@ void Map::eventHandle()
 ///to be implemented
 ///if((x<10)||(x>490)||(y<10)||(y>490))
 ///change the x and y of all the tiles in the map
-
+    if(WindowProperty::event.type == SDL_KEYDOWN){
+                    switch(WindowProperty::event.key.keysym.sym){
+                    case SDLK_w:
+                        moveTilesUp(1);
+                    break;
+                     case SDLK_a:
+                        moveTilesLeft(1);
+                    break;
+                     case SDLK_s:
+                        moveTilesDown(1);
+                    break;
+                     case SDLK_d:
+                        moveTilesRight(1);
+                    break;
+                    }
+    }
 }
 
 void Map::updateTile()
@@ -102,7 +117,7 @@ void Map::moveTilesUp(int distanceUp){
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         int height= it->getH();
-        it->setY(distanceUp*(-height));
+        it->setY(distanceUp*(height));
     }
 }
 
@@ -111,7 +126,7 @@ void Map::moveTilesDown(int distanceDown){
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         int height= it->getH();
-        it->setY(distanceDown*(height));
+        it->setY(distanceDown*(-height));
     }
 }
 
@@ -120,7 +135,7 @@ void Map::moveTilesRight(int distanceRight){
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         int width= it->getW();
-        it->setX(distanceRight*(width));
+        it->setX(distanceRight*(-width));
     }
 }
 
@@ -129,6 +144,6 @@ void Map::moveTilesLeft(int distanceLeft){
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         int width= it->getW();
-        it->setX(distanceLeft*(-width));
+        it->setX(distanceLeft*(width));
     }
 }

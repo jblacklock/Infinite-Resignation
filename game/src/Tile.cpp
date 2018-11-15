@@ -50,12 +50,16 @@ return this->h;
 }
 
 void Tile::setX(int movHori){
-    this->x = (movHori*(this->w));
+    //this->x = ((this->x) + movHori);
+    //std::cout<< "the x value has been set: " << movHori << endl;
+    this->getComponent<TransformComponent>().position.x = (this->getComponent<TransformComponent>().position.x) + movHori;
     return;
 }
 
 void Tile::setY(int movVert){
-    this->y = (movVert*(this->h));
+    //this->y = ((this->y) + movVert);
+    this->getComponent<TransformComponent>().position.y = (this->getComponent<TransformComponent>().position.y) + movVert;
+    //std::cout<< "the y value has been set: " << movVert << endl;
     return;
     }
 

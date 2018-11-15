@@ -40,4 +40,6 @@ void assetHandler::render(){
 */
 void assetHandler::keyEventHandler(){
 
+level->eventHandle();
+
 }
