@@ -10,6 +10,9 @@ Tile::~Tile()
 
 }
 
+
+
+
 void Tile::init(char* sprite, int x, int y, int w, int h)
 {
 

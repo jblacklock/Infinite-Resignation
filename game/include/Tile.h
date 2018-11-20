@@ -21,6 +21,7 @@ public:
     ///should this be virtual?
     virtual ~Tile();
     void init(char* sprite, int x, int y, int w, int h);
+    void init(char* sprite, int x, int y, int w, int h, int weight, char* foregroundSprite);
     void render();
     void update();
     ///event handler will eventually have to be incorporated
@@ -42,6 +43,8 @@ private:
     int h;
     int w;
     char* sprite;
+    int weight;
+    char* foregroundSprite;
     //int weight;
 
     //SDL_Rect srcRect,dstRect;
