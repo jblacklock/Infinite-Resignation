@@ -14,9 +14,9 @@ int Columns;
 */
 void assetHandler::init(){
 
-    Rows = MapGenerator::determineRows(2);
-    Columns = MapGenerator::determineColumns(2);
-    level = new Map(2, Rows, Columns);
+    Rows = MapGenerator::determineRows(1);
+    Columns = MapGenerator::determineColumns(1);
+    level = new Map(1, Rows, Columns);
     //level->moveTilesRight(3);
     //level->moveTilesDown(1);
 }
