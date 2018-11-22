@@ -15,6 +15,7 @@ class CharacterState : public MenuState
     protected:
 
     private:
+        void setCharacter(int);
         MenuScreen* menu;
 };
 

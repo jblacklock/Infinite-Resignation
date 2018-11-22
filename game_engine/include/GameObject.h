@@ -15,7 +15,7 @@ class GameObject
             // Constructor
         GameObject():entityHandler(this->manager.addEntity()){};
         virtual ~GameObject(){
-            manager.destroyEntities();
+            entityHandler.destroyAll();
         }
         // Add and Get Components
         template <typename T,typename... Args> void addComponent(Args... args){
@@ -23,19 +23,20 @@ class GameObject
         }
         template <typename T> T& getComponent(){
             return entityHandler.getComponent<T>();
-
         }
 
         // Component Manager
         Manager manager;
         Entity& entityHandler;
-
+        virtual void clearAll(){
+            entityHandler.destroyAll();
+        }
         virtual void update(){
-            manager.refresh();
-            manager.update();
+            //manager.refresh();
+            entityHandler.update();
         };
         virtual void render(){
-            manager.draw();
+            entityHandler.draw();
         };
 };
 

@@ -5,20 +5,21 @@ class PlayerCharacter : public Character
 {
     public:
         PlayerCharacter()= default;
+        PlayerCharacter(const PlayerCharacter& other){
+            this->init(other.name,other.gender,other.sprite,other.character,other.x,other.y,other.w,other.h);
+        } ;
+        PlayerCharacter& operator=(const PlayerCharacter& other){
+            this->init(other.name,other.gender,other.sprite,other.character,other.x,other.y,other.w,other.h);
+            return *this;
+        }
         virtual ~PlayerCharacter();
-        void init(std::string name,Gender gender, char* sprite,char* fullSheet,int x,int y, int w, int h);
+        void init(char* name,Gender gender, char* sprite,char* fullSheet,int x,int y, int w, int h);
         void update();
         void render();
         void handleEvent();
         void setDefault();
-        int getLevel();
-        int getExperience();
-        int getMaxHP();
-        int getHP();
-        int getAgility();
-        int getStrength();
-        int getLuck();
-        int getIntelligence();
+        void renderFullSheet(int x,int y, int w, int h);
+
 };
 
 #endif // CHARACTERSTATE_H

@@ -1,15 +1,28 @@
 #include "Characters/PlayerCharacter.h"
-PlayerCharacter::~PlayerCharacter(){
-}
-void PlayerCharacter::init(std::string name,Gender gender,char* sprite,char* fullCharacter,int x,int y, int w, int h){
+
+void PlayerCharacter::init(char* name,Gender gender,char* sprite,char* fullCharacter,int x,int y, int w, int h){
     this->name = name;
     this->gender = gender;
-    printf(sprite);
+    this->sprite = sprite;
+    this->character = fullCharacter;
+    this->x = x;
+    this->y = y;
+    this->w = w;
+    this->h = h;
     this->addComponent<TransformComponent>(x,y,100,100);
-    this->addComponent<SpriteRenderer>(sprite,w,h,0,3,60);
+    this->addComponent<SpriteRenderer>(sprite,w,h,2,3,60);
     this->addComponent<ColliderComponent>(name);
+    SDL_Surface* tempSurface = IMG_Load(this->character);
+    this->fullCharacterSheet = SDL_CreateTextureFromSurface(WindowProperty::renderer, tempSurface);
+    SDL_FreeSurface(tempSurface);
+
     setDefault();
 }
+PlayerCharacter::~PlayerCharacter(){
+   SDL_DestroyTexture(this->fullCharacterSheet);
+   this->fullCharacterSheet = NULL;
+}
+
 void PlayerCharacter::render(){
     GameObject::render();
 }
@@ -33,36 +46,18 @@ void PlayerCharacter::setDefault(){
     this->attributes.intelligence = 10;
 }
 
-int PlayerCharacter::getLevel(){
-    return this->attributes.level;
-}
+void PlayerCharacter::renderFullSheet(int x, int y,int w, int h){
+     SDL_Rect src,dst;
+     src.x=src.y=0;
+     src.h= 3200;
+     src.w=2100;
+     dst.x=x;
+     dst.y=y;
+     dst.h=h;
+     dst.w=w;
+    SDL_RenderCopy(WindowProperty::renderer,this->fullCharacterSheet,&src,&dst);
 
-int PlayerCharacter::getExperience(){
-    return this->attributes.experience;
-}
 
-int PlayerCharacter::getMaxHP(){
-    return this->attributes.maxHP;
 }
-
-int PlayerCharacter::getHP(){
-    return this->attributes.hp;
-}
-int PlayerCharacter::getAgility(){
-    return this->attributes.agility;
-}
-
-int PlayerCharacter::getStrength(){
-    return this->attributes.strength;
-}
-
-int PlayerCharacter::getLuck(){
-    return this->attributes.luck;
-}
-
-int PlayerCharacter::getIntelligence(){
-    return this->attributes.intelligence;
-}
-
 
 

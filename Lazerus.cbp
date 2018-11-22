@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add directory="game/include" />
 					<Add directory="game/include/Menu" />
+					<Add directory="game/include/Characters" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -26,6 +27,7 @@
 					<Add option="-O2" />
 					<Add directory="game/include" />
 					<Add directory="game/include/Menu" />
+					<Add directory="game/include/Characters" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -50,6 +52,7 @@
 		<Unit filename="game/include/AssetHandler.h" />
 		<Unit filename="game/include/Characters/Character.h" />
 		<Unit filename="game/include/Characters/EnemyCharacter.h" />
+		<Unit filename="game/include/Characters/MainCharacterFactory.h" />
 		<Unit filename="game/include/Characters/PlayerCharacter.h" />
 		<Unit filename="game/include/Menu/CharacterState.h" />
 		<Unit filename="game/include/Menu/MainState.h" />
