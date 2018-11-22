@@ -90,7 +90,7 @@ void MainState::handleEvent(){
         this->menu->changeState(new CharacterState(this->menu));
     }
     if(kiss_button_event(&creditsButton,&WindowProperty::event,&draw)){
-        printf("CLICKED");
+        this->menu->changeState(new CreditState(this->menu));
     }
     if(kiss_button_event(&exitButton,&WindowProperty::event,&draw)){
         WindowProperty::isRunning = false;

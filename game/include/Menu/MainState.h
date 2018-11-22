@@ -7,6 +7,7 @@
 #include "components/Components.h"
 #include "MenuScreen.h"
 #include "CharacterState.h"
+#include "CreditState.h"
 class MenuScreen;
 class MainState : public MenuState
 {

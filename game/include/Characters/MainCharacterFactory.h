@@ -9,10 +9,10 @@ class MainCharacterFactory
             PlayerCharacter newCharacter;
             switch(selection){
             case 1:
-                newCharacter.init("Ahri",FEMALE,"assets/images/sprites/ahri.png","assets/images/CharacterList/main.png",x,y,39,39);
+                newCharacter.init((char*)"Ahri",FEMALE,(char*)"assets/images/sprites/ahri.png",(char*)"assets/images/CharacterList/main.png",x,y,39,39);
                 break;
             case 2:
-                newCharacter.init("Rose",FEMALE,"assets/images/sprites/rose.png","assets/images/CharacterList/archer.png",x,y,31,33);
+                newCharacter.init((char*)"Rose",FEMALE,(char*)"assets/images/sprites/rose.png",(char*)"assets/images/CharacterList/archer.png",x,y,31,33);
                 break;
             default:
                 break;

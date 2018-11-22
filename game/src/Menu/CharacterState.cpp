@@ -33,9 +33,9 @@ std::string out_string;
     std::stringstream ss;
 
     current = MainCharacterFactory::createPlayableCharacter(value,325,125);
-    kiss_button_new(&backButton,&WindowProperty::window,"Back",0,0,100,50);
-    kiss_button_new(&previousButton,&WindowProperty::window,"Prev",0,150,75,50);
-    kiss_button_new(&nextButton,&WindowProperty::window,"Next",425,150,75,50);
+    kiss_button_new(&backButton,&WindowProperty::window,(char*)"Back",0,0,100,50);
+    kiss_button_new(&previousButton,&WindowProperty::window,(char*)"Prev",0,150,75,50);
+    kiss_button_new(&nextButton,&WindowProperty::window,(char*)"Next",425,150,75,50);
     ss << current.getName();
     kiss_label_new(&name,&WindowProperty::window,((char*)ss.str().c_str()),325,100);
     ss.str(std::string());

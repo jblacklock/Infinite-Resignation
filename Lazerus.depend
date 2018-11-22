@@ -1724,7 +1724,7 @@
 
 1541733123 d:\code\c++ projects\infinite-resignation\game\include\menu\menustate.h
 
-1541733123 d:\code\c++ projects\infinite-resignation\game\include\menu\mainstate.h
+1542857845 d:\code\c++ projects\infinite-resignation\game\include\menu\mainstate.h
 	<string>
 	"WindowProperty.h"
 	"MenuState.h"
@@ -1732,8 +1732,9 @@
 	"components/Components.h"
 	"MenuScreen.h"
 	"CharacterState.h"
+	"CreditState.h"
 
-1541733123 source:d:\code\c++ projects\infinite-resignation\game\src\menu\mainstate.cpp
+1542857823 source:d:\code\c++ projects\infinite-resignation\game\src\menu\mainstate.cpp
 	"MainState.h"
 
 1542832727 d:\code\c++ projects\infinite-resignation\game_engine\include\gameobject.h
@@ -1769,6 +1770,18 @@
 1541741085 source:d:\code\c++ projects\infinite-resignation\game\src\characters\maincharacterfactory.cpp
 	"MainCharacterFactory.h"
 
-1542792104 d:\code\c++ projects\infinite-resignation\game\include\characters\maincharacterfactory.h
+1542859011 d:\code\c++ projects\infinite-resignation\game\include\characters\maincharacterfactory.h
 	"PlayerCharacter.h"
+
+1542857713 d:\code\c++ projects\infinite-resignation\game\include\menu\creditstate.h
+	<string>
+	"WindowProperty.h"
+	"MenuState.h"
+	"GameObject.h"
+	"components/Components.h"
+	"MenuScreen.h"
+	"CharacterState.h"
+
+1542858751 source:d:\code\c++ projects\infinite-resignation\game\src\menu\creditstate.cpp
+	"CreditState.h"
 
