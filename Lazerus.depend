@@ -1747,7 +1747,7 @@
 	"MenuScreen.h"
 	<MenuState.h>
 
-1542831382 source:d:\code\c++ projects\infinite-resignation\game\src\menu\characterstate.cpp
+1542859028 source:d:\code\c++ projects\infinite-resignation\game\src\menu\characterstate.cpp
 	"CharacterState.h"
 	"Characters/Character.h"
 	"MainCharacterFactory.h"
@@ -1782,6 +1782,7 @@
 	"MenuScreen.h"
 	"CharacterState.h"
 
-1542858751 source:d:\code\c++ projects\infinite-resignation\game\src\menu\creditstate.cpp
+1542868996 source:d:\code\c++ projects\infinite-resignation\game\src\menu\creditstate.cpp
 	"CreditState.h"
+	<string>
 
