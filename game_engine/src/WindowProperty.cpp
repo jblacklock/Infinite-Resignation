@@ -1,7 +1,7 @@
 #include "WindowProperty.h"
 /** Made by the singular entity known as Lazer (Github:Lazer7) */
 // Static window properties
-std::string WindowProperty::title="Lazerus Game Engine";
+std::string WindowProperty::title="Infinite Resignation";
 const int WindowProperty::WindowHeight = 500;
 const int WindowProperty::WindowWidth = 500;
 bool WindowProperty::isRunning = false;
@@ -32,7 +32,6 @@ bool WindowProperty::init() {
 void WindowProperty::setWindowProperty(WindowValue scale) {
     FileManager::write("data/WindowScreen.dat",scale);
     windowValue=scale;
-    printf("WINDOW VALUES %d %d\n",windowValue.height, windowValue.width);
 }
 /**
     Set Window Properties with scale values
