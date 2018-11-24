@@ -8,15 +8,15 @@
 
 class AssetHandler
 {
-    public:
-        AssetHandler(){};
-        void init();
-        void update();
-        void render();
-        void keyEventHandler();
-    private:
-        Media music;
-        int frameStart;
+public:
+    AssetHandler() {};
+    void init();
+    void update();
+    void render();
+    void keyEventHandler();
+private:
+    Media music;
+    int frameStart;
 
 };
 

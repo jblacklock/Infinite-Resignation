@@ -8,27 +8,27 @@
 class MenuScreen;
 class CharacterState : public MenuState
 {
-    public:
-        CharacterState(MenuScreen*);
-        virtual ~CharacterState();
-        void update();
-        void render();
-        void handleEvent();
-    protected:
+public:
+    CharacterState(MenuScreen*);
+    virtual ~CharacterState();
+    void update();
+    void render();
+    void handleEvent();
+protected:
 
-    private:
-        void setCharacter(int);
-        MenuScreen* menu;
-        PlayerCharacter current;
-        kiss_button backButton,previousButton,nextButton = {0};
-        kiss_label name = {0};
-        kiss_label maxHP = {0};
-        kiss_label agility = {0};
-        kiss_label strength = {0};
-        kiss_label luck = {0};
-        kiss_label intelligence = {0};
-        kiss_label level ={0};
-        kiss_label xp ={0};
+private:
+    void setCharacter(int);
+    MenuScreen* menu;
+    PlayerCharacter current;
+    kiss_button backButton,previousButton,nextButton = {0};
+    kiss_label name = {0};
+    kiss_label maxHP = {0};
+    kiss_label agility = {0};
+    kiss_label strength = {0};
+    kiss_label luck = {0};
+    kiss_label intelligence = {0};
+    kiss_label level = {0};
+    kiss_label xp = {0};
 
 };
 

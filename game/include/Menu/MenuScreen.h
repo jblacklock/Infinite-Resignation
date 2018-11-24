@@ -6,18 +6,18 @@
 class MenuScreen
 {
 
-    public:
-        MenuScreen() = default;
-        virtual ~MenuScreen();
-        void init();
-        void update();
-        void render();
-        void handleEvent();
-        void changeState(MenuState*);
-    protected:
+public:
+    MenuScreen() = default;
+    virtual ~MenuScreen();
+    void init();
+    void update();
+    void render();
+    void handleEvent();
+    void changeState(MenuState*);
+protected:
 
-    private:
-        class MenuState* current;
+private:
+    class MenuState* current;
 };
 
 #endif // MENUSCREEN_H

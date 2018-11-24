@@ -1,5 +1,8 @@
 #include "CreditState.h"
 #include <string>
+/**
+    Displays the roles and the main developers for those roles
+*/
 CreditState::CreditState(MenuScreen* menu)
 {
     this->menu = menu;
@@ -12,19 +15,27 @@ CreditState::CreditState(MenuScreen* menu)
     credit.textcolor = {255, 255, 255, 255};
     textL.textcolor = {255, 255, 255, 255};
 }
-
+/**
+    Default Deconstructor
+*/
 CreditState::~CreditState()
 {
     //dtor
 }
-
-void CreditState::render(){
+/**
+    Renders the Text of the Credits for the developers of the game
+*/
+void CreditState::render()
+{
     kiss_button_draw(&cBackButton,WindowProperty::renderer);
     kiss_label_draw(&credit,WindowProperty::renderer);
     kiss_label_draw(&textL,WindowProperty::renderer);
 }
-
-void CreditState::update(){
+/**
+    Updates text to match the screen size
+*/
+void CreditState::update()
+{
     double diag = sqrt(pow(WindowProperty::getHeightDisposition(),2) + pow(WindowProperty::getWidthDisposition(),2));
     cBackButton.rect.h = 50 * WindowProperty::getHeightDisposition();
     cBackButton.rect.w = 100 * WindowProperty::getWidthDisposition();
@@ -41,19 +52,25 @@ void CreditState::update(){
     textL.rect.y = 150 * WindowProperty::getHeightDisposition();
 
     textL.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 15 *diag);
-    if((15 *diag)>30){
+    if((15 *diag)>30)
+    {
         strcpy(textL.text,textXL.c_str());
     }
-    else{
+    else
+    {
         strcpy(textL.text,text.c_str());
 
     }
 
 }
-
-void CreditState::handleEvent(){
+/**
+    Handles input to go back to the main menu
+*/
+void CreditState::handleEvent()
+{
     int draw =0;
-    if(kiss_button_event(&cBackButton,&WindowProperty::event,&draw)){
+    if(kiss_button_event(&cBackButton,&WindowProperty::event,&draw))
+    {
         this->menu->changeState(new MainState(this->menu));
     }
 }

@@ -1,5 +1,8 @@
 #include "CharacterState.h"
-
+/**
+    Create a scene to view all playable character in the game
+    Shows the main character first
+*/
 CharacterState::CharacterState(MenuScreen* menu)
 {
 
@@ -7,14 +10,20 @@ CharacterState::CharacterState(MenuScreen* menu)
     setCharacter(1);
 
 }
-
+/**
+    Default Deconstructor
+*/
 CharacterState::~CharacterState()
 {
     //dtor
 }
-
-void CharacterState::setCharacter(int value){
-std::string out_string;
+/**
+    Creates a new character based on user input
+    and sets the stats of the current character being shown
+*/
+void CharacterState::setCharacter(int value)
+{
+    std::string out_string;
     std::stringstream ss;
 
     current = MainCharacterFactory::createPlayableCharacter(value,325,125);
@@ -63,8 +72,11 @@ std::string out_string;
     level.font.font =  TTF_OpenFont("assets/fonts/standard.ttf", 20);
     name.font.font = TTF_OpenFont("assets/fonts/standard.ttf",30);
 }
-
-void CharacterState::render(){
+/**
+    Render the Labels, Buttons, and sprite for the characters
+*/
+void CharacterState::render()
+{
     kiss_button_draw(&backButton,WindowProperty::renderer);
     kiss_button_draw(&nextButton,WindowProperty::renderer);
     kiss_button_draw(&previousButton,WindowProperty::renderer);
@@ -79,8 +91,11 @@ void CharacterState::render(){
     current.render();
     current.renderFullSheet(5,25,300,450);
 }
-
-void CharacterState::update(){
+/**
+    Updates the Labels, buttons and sprites when character is changed
+*/
+void CharacterState::update()
+{
     double diag = sqrt(pow(WindowProperty::getHeightDisposition(),2) + pow(WindowProperty::getWidthDisposition(),2));
     backButton.rect.h = 50 * WindowProperty::getHeightDisposition();
     backButton.rect.w = 100 * WindowProperty::getWidthDisposition();
@@ -92,18 +107,25 @@ void CharacterState::update(){
     current.update();
 
 }
-
-void CharacterState::handleEvent(){
+/**
+    Handles changes to go back to the menu screen or handles
+    displaying next or previous characters on the screen
+*/
+void CharacterState::handleEvent()
+{
     int draw =0;
-    if(kiss_button_event(&backButton,&WindowProperty::event,&draw)){
+    if(kiss_button_event(&backButton,&WindowProperty::event,&draw))
+    {
         this->menu->changeState(new MainState(this->menu));
     }
-    if(kiss_button_event(&nextButton,&WindowProperty::event,&draw)){
+    if(kiss_button_event(&nextButton,&WindowProperty::event,&draw))
+    {
         current.clearAll();
         setCharacter(2);
         //this->menu->changeState(new MainState(this->menu));
     }
-    if(kiss_button_event(&previousButton,&WindowProperty::event,&draw)){
+    if(kiss_button_event(&previousButton,&WindowProperty::event,&draw))
+    {
         current.clearAll();
         setCharacter(1);
         //this->menu->changeState(new MainState(this->menu));
