@@ -1,4 +1,4 @@
-#include "MapGenerator.h"
+#include "Map/MapGenerator.h"
 #include <iostream>
 #include <fstream>
 using namespace std;

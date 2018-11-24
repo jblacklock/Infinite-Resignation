@@ -385,7 +385,7 @@
 	<stdio.h>
 	<SDL2/SDL_mixer.h>
 
-1541135821 source:d:\code\c++ projects\infinite-resignation\game_engine\main.cpp
+1543092391 source:d:\code\c++ projects\infinite-resignation\game_engine\main.cpp
 	"Window.h"
 
 1540246454 source:d:\code\c++ projects\lazerus\game\src\assethandler.cpp
@@ -397,13 +397,17 @@
 	"Media.h"
 	"WindowProperty.h"
 
-1540111529 d:\code\c++ projects\infinite-resignation\game_engine\include\components\components.h
+1541733043 d:\code\c++ projects\infinite-resignation\game_engine\include\components\components.h
+	"ComponentManager.h"
+	"TransformComponent.h"
+	"SpriteRenderer.h"
+	"ColliderComponent.h"
 	"ComponentManager.h"
 	"TransformComponent.h"
 	"SpriteRenderer.h"
 	"ColliderComponent.h"
 
-1540111529 d:\code\c++ projects\infinite-resignation\game_engine\include\components\componentmanager.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\include\components\componentmanager.h
 	<iostream>
 	<vector>
 	<memory>
@@ -411,7 +415,11 @@
 	<bitset>
 	<array>
 
-1540111529 d:\code\c++ projects\infinite-resignation\game_engine\include\components\transformcomponent.h
+1541733043 d:\code\c++ projects\infinite-resignation\game_engine\include\components\transformcomponent.h
+	"../include/Vector2D.h"
+	<iostream>
+	"WindowProperty.h"
+	<math.h>
 	"../include/Vector2D.h"
 	<iostream>
 	"WindowProperty.h"
@@ -914,40 +922,20 @@
 	"Tile.h"
 	<list>
 
-1541733123 source:d:\code\c++ projects\infinite-resignation\game\src\assethandler.cpp
+1543092941 source:d:\code\c++ projects\infinite-resignation\game\src\assethandler.cpp
 	"AssetHandler.h"
 	"Menu/MenuScreen.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game\include\assethandler.h
+1543092390 d:\code\c++ projects\infinite-resignation\game\include\assethandler.h
 	<list>
 	<components/Components.h>
 	"Media.h"
 	"WindowProperty.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\include\components\components.h
-	"ComponentManager.h"
-	"TransformComponent.h"
-	"SpriteRenderer.h"
-	"ColliderComponent.h"
-
-1542837053 d:\code\c++ projects\infinite-resignation\game_engine\include\components\componentmanager.h
-	<iostream>
-	<vector>
-	<memory>
-	<algorithm>
-	<bitset>
-	<array>
-
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\include\components\transformcomponent.h
-	"../include/Vector2D.h"
-	<iostream>
-	"WindowProperty.h"
-	<math.h>
-
 1541733043 d:\code\c++ projects\infinite-resignation\game_engine\include\vector2d.h
 	<iostream>
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\include\windowproperty.h
+1543092391 d:\code\c++ projects\infinite-resignation\game_engine\include\windowproperty.h
 	"GUI/kiss_sdl.h"
 	<iostream>
 	<fstream>
@@ -955,7 +943,7 @@
 	"FileManager.h"
 	<SDL2/SDL.h>
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_sdl.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_sdl.h
 	<SDL.h>
 	<SDL_ttf.h>
 	<SDL_image.h>
@@ -975,7 +963,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -1007,12 +995,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_main.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_stdinc.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -1041,34 +1029,34 @@
 	<stdlib.h>
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_config.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_config.h
 	"SDL_platform.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_platform.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_platform.h
 	"AvailabilityMacros.h"
 	"TargetConditionals.h"
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\begin_code.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\begin_code.h
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\close_code.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\close_code.h
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_assert.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_assert.h
 	"SDL_config.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_atomic.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
 	<mbarrier.h>
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_audio.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -1078,24 +1066,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_error.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_endian.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<endian.h>
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_mutex.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_thread.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -1106,18 +1094,18 @@
 	<stdlib.h>
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_rwops.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_clipboard.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_cpuinfo.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -1131,7 +1119,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_events.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -1145,7 +1133,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_video.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -1153,13 +1141,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_pixels.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"SDL_endian.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_rect.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -1167,7 +1155,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_surface.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -1176,11 +1164,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_blendmode.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_keyboard.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -1188,27 +1176,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_keycode.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_scancode.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_mouse.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_joystick.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_gamecontroller.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -1216,11 +1204,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_quit.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_gesture.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -1228,60 +1216,60 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_touch.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_filesystem.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_haptic.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_hints.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_loadso.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_log.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_messagebox.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_power.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_render.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_shape.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_shape.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -1290,7 +1278,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_system.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -1298,33 +1286,33 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_timer.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_version.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_ttf.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_ttf.h
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_image.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_image.h
 	"SDL.h"
 	"SDL_version.h"
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\include\filemanager.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\include\filemanager.h
 	<string>
 	<SHA/sha2.h>
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sha\sha2.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sha\sha2.h
 	<algorithm>
 	<cassert>
 	<iterator>
@@ -1332,22 +1320,22 @@
 	<vector>
 	<fstream>
 
-1542792622 d:\code\c++ projects\infinite-resignation\game_engine\include\components\spriterenderer.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\include\components\spriterenderer.h
 	"Components.h"
 	"SDL2/SDL_image.h"
 	"SDL2/SDL.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\include\components\collidercomponent.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\include\components\collidercomponent.h
 	<string>
 	<SDL2/SDL.h>
 	"components/ComponentManager.h"
 	"components/Components.h"
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\include\media.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\include\media.h
 	<stdio.h>
 	<SDL2/SDL_mixer.h>
 
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_mixer.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\sdl2\sdl_mixer.h
 	"SDL_stdinc.h"
 	"SDL_rwops.h"
 	"SDL_audio.h"
@@ -1356,22 +1344,19 @@
 	"begin_code.h"
 	"close_code.h"
 
-1541733043 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_draw.c
+1543092390 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_draw.c
 	"kiss_sdl.h"
 
-1541733043 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_general.c
+1543092390 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_general.c
 	"kiss_sdl.h"
 
-1541733043 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_posix.c
+1543092390 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_posix.c
 	"kiss_sdl.h"
 
-1541733043 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_widgets.c
+1543092390 source:d:\code\c++ projects\infinite-resignation\game_engine\external_libraries\gui\kiss_widgets.c
 	"kiss_sdl.h"
 
-1541733043 source:d:\code\c++ projects\infinite-resignation\game_engine\main.cpp
-	"Window.h"
-
-1541733043 d:\code\c++ projects\infinite-resignation\game_engine\include\window.h
+1543092391 d:\code\c++ projects\infinite-resignation\game_engine\include\window.h
 	<iostream>
 	<stdio.h>
 	<string>
@@ -1381,29 +1366,29 @@
 	"WindowProperty.h"
 	"GUI/kiss_sdl.h"
 
-1541733043 source:d:\code\c++ projects\infinite-resignation\game_engine\src\media.cpp
+1543092391 source:d:\code\c++ projects\infinite-resignation\game_engine\src\media.cpp
 	"Media.h"
 
 1541733043 source:d:\code\c++ projects\infinite-resignation\game_engine\src\vector2d.cpp
 	"Vector2D.h"
 
-1542832073 source:d:\code\c++ projects\infinite-resignation\game_engine\src\window.cpp
+1543092833 source:d:\code\c++ projects\infinite-resignation\game_engine\src\window.cpp
 	"Window.h"
 
-1541733123 source:d:\code\c++ projects\infinite-resignation\game_engine\src\windowproperty.cpp
+1543092391 source:d:\code\c++ projects\infinite-resignation\game_engine\src\windowproperty.cpp
 	"WindowProperty.h"
 
-1541733123 source:d:\code\c++ projects\infinite-resignation\game\src\menu\menuscreen.cpp
+1543092390 source:d:\code\c++ projects\infinite-resignation\game\src\menu\menuscreen.cpp
 	"Menu/MenuScreen.h"
 
-1541733123 d:\code\c++ projects\infinite-resignation\game\include\menu\menuscreen.h
+1543092390 d:\code\c++ projects\infinite-resignation\game\include\menu\menuscreen.h
 	"Menu/MenuState.h"
 	"MainState.h"
 	"WindowProperty.h"
 
-1541733123 d:\code\c++ projects\infinite-resignation\game\include\menu\menustate.h
+1543092390 d:\code\c++ projects\infinite-resignation\game\include\menu\menustate.h
 
-1542857845 d:\code\c++ projects\infinite-resignation\game\include\menu\mainstate.h
+1543092390 d:\code\c++ projects\infinite-resignation\game\include\menu\mainstate.h
 	<string>
 	"WindowProperty.h"
 	"MenuState.h"
@@ -1413,34 +1398,34 @@
 	"CharacterState.h"
 	"CreditState.h"
 
-1542857823 source:d:\code\c++ projects\infinite-resignation\game\src\menu\mainstate.cpp
+1543092390 source:d:\code\c++ projects\infinite-resignation\game\src\menu\mainstate.cpp
 	"MainState.h"
 
-1542832727 d:\code\c++ projects\infinite-resignation\game_engine\include\gameobject.h
+1543092390 d:\code\c++ projects\infinite-resignation\game_engine\include\gameobject.h
 	<iostream>
 	<string>
 	"components/ComponentManager.h"
 	<typeinfo>
 
-1542789282 d:\code\c++ projects\infinite-resignation\game\include\menu\characterstate.h
+1543092390 d:\code\c++ projects\infinite-resignation\game\include\menu\characterstate.h
 	"MenuScreen.h"
 	<MenuState.h>
 
-1542859028 source:d:\code\c++ projects\infinite-resignation\game\src\menu\characterstate.cpp
+1543092390 source:d:\code\c++ projects\infinite-resignation\game\src\menu\characterstate.cpp
 	"CharacterState.h"
 	"Characters/Character.h"
 	"MainCharacterFactory.h"
 	<sstream>
 
-1541733123 source:d:\code\c++ projects\infinite-resignation\game\src\characters\enemycharacter.cpp
+1543092390 source:d:\code\c++ projects\infinite-resignation\game\src\characters\enemycharacter.cpp
 
-1542832708 source:d:\code\c++ projects\infinite-resignation\game\src\characters\playerchracter.cpp
+1543092390 source:d:\code\c++ projects\infinite-resignation\game\src\characters\playerchracter.cpp
 	"Characters/PlayerCharacter.h"
 
-1542832110 d:\code\c++ projects\infinite-resignation\game\include\characters\playercharacter.h
+1543092390 d:\code\c++ projects\infinite-resignation\game\include\characters\playercharacter.h
 	"Characters/Character.h"
 
-1542830894 d:\code\c++ projects\infinite-resignation\game\include\characters\character.h
+1543092390 d:\code\c++ projects\infinite-resignation\game\include\characters\character.h
 	"GameObject.h"
 	"components/Components.h"
 	"SDL2/SDL.h"
@@ -1449,10 +1434,10 @@
 1541741085 source:d:\code\c++ projects\infinite-resignation\game\src\characters\maincharacterfactory.cpp
 	"MainCharacterFactory.h"
 
-1542859011 d:\code\c++ projects\infinite-resignation\game\include\characters\maincharacterfactory.h
+1543092390 d:\code\c++ projects\infinite-resignation\game\include\characters\maincharacterfactory.h
 	"PlayerCharacter.h"
 
-1542857713 d:\code\c++ projects\infinite-resignation\game\include\menu\creditstate.h
+1543092390 d:\code\c++ projects\infinite-resignation\game\include\menu\creditstate.h
 	<string>
 	"WindowProperty.h"
 	"MenuState.h"
@@ -1461,7 +1446,36 @@
 	"MenuScreen.h"
 	"CharacterState.h"
 
-1542868996 source:d:\code\c++ projects\infinite-resignation\game\src\menu\creditstate.cpp
+1543092390 source:d:\code\c++ projects\infinite-resignation\game\src\menu\creditstate.cpp
 	"CreditState.h"
 	<string>
+
+1543093489 source:d:\code\c++ projects\infinite-resignation\game\src\map\mapgenerator.cpp
+	"Map/MapGenerator.h"
+	<iostream>
+	<fstream>
+
+1543092708 d:\code\c++ projects\infinite-resignation\game\include\map\mapgenerator.h
+	"Tile.h"
+
+1543093506 d:\code\c++ projects\infinite-resignation\game\include\map\tile.h
+	<stdio.h>
+	<string.h>
+	"SDL2/SDL.h"
+	"SDL2/SDL_image.h"
+	"WindowProperty.h"
+	"GameObject.h"
+
+1543093493 source:d:\code\c++ projects\infinite-resignation\game\src\map\tile.cpp
+	"Map/Tile.h"
+	<iostream>
+	"components/Components.h"
+
+1543093501 source:d:\code\c++ projects\infinite-resignation\game\src\map\tilefactory.cpp
+	"Map/TileFactory.h"
+	"Map/Tile.h"
+	<iostream>
+
+1543092708 d:\code\c++ projects\infinite-resignation\game\include\map\tilefactory.h
+	"Tile.h"
 

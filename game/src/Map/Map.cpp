@@ -1,9 +1,9 @@
-#include "Map.h"
+#include "Map/Map.h"
 #include <fstream>
 #include <stdio.h>
 #include <string>
 #include <iostream>
-#include "TileFactory.h"
+#include "Map/TileFactory.h"
 #include "components/Components.h"
 using namespace std;
 

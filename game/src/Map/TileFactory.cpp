@@ -1,5 +1,5 @@
-#include "TileFactory.h"
-#include "Tile.h"
+#include "Map/TileFactory.h"
+#include "Map/Tile.h"
 using namespace std;
 #include <iostream>
 
