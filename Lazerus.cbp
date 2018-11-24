@@ -5,6 +5,7 @@
 		<Option title="Lazerus" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="game\include\;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Lazerus" prefix_auto="1" extension_auto="1" />
