@@ -13,10 +13,12 @@ int Columns;
     TODO:: Refactor to place all characters in a vector
 */
 void assetHandler::init(){
-
-    Rows = MapGenerator::determineRows(1);
-    Columns = MapGenerator::determineColumns(1);
-    level = new Map(1, Rows, Columns);
+    int levelNumber = 1;
+    Rows = MapGenerator::determineRows(levelNumber);
+    Columns = MapGenerator::determineColumns(levelNumber);
+    cout << "This is the number of rows: "<< Rows << endl;
+    cout << "This is the number of columns: "<< Columns << endl;
+    level = new Map(levelNumber, Rows, Columns);
     //level->moveTilesRight(3);
     //level->moveTilesDown(1);
 }
