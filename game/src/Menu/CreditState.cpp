@@ -1,32 +1,5 @@
 #include "CreditState.h"
 #include <string>
-kiss_button cBackButton = {0};
-kiss_label credit,textL = {0};
-
-char *creditTitle = (char*)"CREDITS";
-
-std::string text =
-            "Designer              Artist\n\n"+
-std::string("Jimmy Chao          Christina Chao\n")+
-std::string("\n\n\n\n")+
-std::string("Level Designer        Developers\n\n")+
-std::string("Jesse Blacklock        Jimmy Chao\n")+
-std::string("                      Jesse Blacklock\n") +
-std::string("\n\n\n\n")+
-std::string("Dead Inside           Sound\n\n") +
-std::string("Jimmy Chao          Jimmy Chao");
-
-std::string textXL =
-            "Designer              Artist\n\n\n"+
-std::string("Jimmy Chao          Christina Chao\n\n\n")+
-std::string("\n\n\n\n")+
-std::string("Level Designer        Developers\n\n\n")+
-std::string("Jesse Blacklock        Jimmy Chao\n\n\n")+
-std::string("                      Jesse Blacklock\n\n\n") +
-std::string("\n\n\n\n")+
-std::string("Dead Inside           Sound\n\n\n") +
-std::string("Jimmy Chao          Jimmy Chao");
-
 CreditState::CreditState(MenuScreen* menu)
 {
     this->menu = menu;

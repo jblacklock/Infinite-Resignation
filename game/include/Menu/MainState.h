@@ -8,6 +8,7 @@
 #include "MenuScreen.h"
 #include "CharacterState.h"
 #include "CreditState.h"
+#include "LevelSelectionState.h"
 class MenuScreen;
 class MainState : public MenuState
 {

@@ -84,7 +84,7 @@ void MainState::render(){
 void MainState::handleEvent(){
     int draw =0;
     if(kiss_button_event(&startButton,&WindowProperty::event,&draw)){
-        printf("CLICKED");
+        this->menu->changeState(new LevelSelectionState(this->menu));
     }
     if(kiss_button_event(&characterButton,&WindowProperty::event,&draw)){
         this->menu->changeState(new CharacterState(this->menu));

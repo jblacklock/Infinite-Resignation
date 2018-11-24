@@ -1,19 +1,4 @@
 #include "CharacterState.h"
-#include "Characters/Character.h"
-#include "MainCharacterFactory.h"
-#include <sstream>
-PlayerCharacter current;
-
-kiss_button backButton,previousButton,nextButton = {0};
-kiss_label name = {0};
-kiss_label maxHP = {0};
-kiss_label agility = {0};
-kiss_label strength = {0};
-kiss_label luck = {0};
-kiss_label intelligence = {0};
-kiss_label level ={0};
-kiss_label xp ={0};
-
 
 CharacterState::CharacterState(MenuScreen* menu)
 {
