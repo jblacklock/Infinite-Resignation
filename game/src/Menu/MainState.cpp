@@ -34,7 +34,7 @@ MainState::MainState(MenuScreen* menu)
 MainState::~MainState()
 {
     //dtor
-    kiss_clean(&WindowProperty::objects);
+
 }
 /**
     Updates the UI to adjust to the screen size

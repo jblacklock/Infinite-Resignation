@@ -6,13 +6,13 @@
 LevelSelectionState::LevelSelectionState(MenuScreen* menu)
 {
     this->menu = menu;
-    kiss_button_new(&LBackButton,&WindowProperty::window,(char*)"Back",0,0,backWidth,backHeight);
-    kiss_button_new(&Level1,&WindowProperty::window,(char*)"Level 1",column1,row1,buttonWidth,buttonHeight);
-    kiss_button_new(&Level2,&WindowProperty::window,(char*)"Level 2",column1,row2,buttonWidth,buttonHeight);
-    kiss_button_new(&Level3,&WindowProperty::window,(char*)"Level 3",column1,row3,buttonWidth,buttonHeight);
-    kiss_button_new(&Level4,&WindowProperty::window,(char*)"Level 4",column2,row1,buttonWidth,buttonHeight);
+    kiss_button_new(&LBack,&WindowProperty::window,"Back",originX,originY,backWidth,backHeight);
+    kiss_button_new(&Level1,&WindowProperty::window,"Level 1",column1,row1,buttonWidth,buttonHeight);
+    kiss_button_new(&Level2,&WindowProperty::window,"Level 2",column1,row2,buttonWidth,buttonHeight);
+    kiss_button_new(&Level3,&WindowProperty::window,"Level 3",column1,row3,buttonWidth,buttonHeight);
+    kiss_button_new(&Level4,&WindowProperty::window,"Level 4",column2,row1,buttonWidth,buttonHeight);
     //kiss_button_new(&Level5,&WindowProperty::window,(char*)"Level 5",column2,row2,buttonWidth,buttonHeight);
-    LBackButton.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
+    LBack.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
     Level1.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
     Level2.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
     Level3.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
@@ -24,13 +24,14 @@ LevelSelectionState::LevelSelectionState(MenuScreen* menu)
 */
 LevelSelectionState::~LevelSelectionState()
 {
+
 }
 /**
     Updates the buttons adjust to window event handling
 */
 void LevelSelectionState::update()
 {
-    resizeButton(&LBackButton,LBackButton.rect.x,LBackButton.rect.y,backWidth,backHeight);
+    resizeButton(&LBack,LBack.rect.x,LBack.rect.y,backWidth,backHeight);
     resizeButton(&Level1,column1,row1,buttonWidth,buttonHeight);
     resizeButton(&Level2,column1,row2,buttonWidth,buttonHeight);
     resizeButton(&Level3,column1,row3,buttonWidth,buttonHeight);
@@ -42,7 +43,7 @@ void LevelSelectionState::update()
 */
 void LevelSelectionState::render()
 {
-    kiss_button_draw(&LBackButton,WindowProperty::renderer);
+    kiss_button_draw(&LBack,WindowProperty::renderer);
     kiss_button_draw(&Level1,WindowProperty::renderer);
     kiss_button_draw(&Level2,WindowProperty::renderer);
     kiss_button_draw(&Level3,WindowProperty::renderer);
@@ -55,7 +56,7 @@ void LevelSelectionState::render()
 void LevelSelectionState::handleEvent()
 {
     int draw =0;
-    if(kiss_button_event(&LBackButton,&WindowProperty::event,&draw))
+    if(kiss_button_event(&LBack,&WindowProperty::event,&draw))
     {
         this->menu->changeState(new MainState(this->menu));
     }
