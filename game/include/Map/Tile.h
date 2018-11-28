@@ -12,15 +12,15 @@ class Tile : public GameObject
 public:
     Tile() = default;
     Tile(const Tile& other){
-        this->init(other.sprite,other.x,other.y,other.w,other.h);
+        this->init(other.sprite,other.x,other.y,other.w,other.h,other.weight);
     }
     Tile& operator=(const Tile& other){
-        this->init(other.sprite,other.x,other.y,other.w,other.h);
+        this->init(other.sprite,other.x,other.y,other.w,other.h,other.weight);
         return *this;
     }
     ///should this be virtual?
     virtual ~Tile();
-    void init(char* sprite, int x, int y, int w, int h);
+    void init(char* sprite, int x, int y, int w, int h, int weight);
     void init(char* sprite, int x, int y, int w, int h, int weight, char* foregroundSprite);
     void render();
     void update();
@@ -45,7 +45,6 @@ private:
     char* sprite;
     int weight;
     char* foregroundSprite;
-    //int weight;
 
     //SDL_Rect srcRect,dstRect;
     //SDL_Texture* sprite;

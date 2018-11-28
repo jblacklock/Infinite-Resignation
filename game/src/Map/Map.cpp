@@ -6,6 +6,7 @@
 #include "Map/TileFactory.h"
 #include "components/Components.h"
 #include "PlayerCharacter.h"
+
 using namespace std;
 
 SDL_Event e;
@@ -52,12 +53,59 @@ Map::Map(int mapID, int Rows, int Columns)
         else i++;
 
     Tile currentTile;
+    weight = 1;
 
-    currentTile.init(tileName, x, y, w, h);
+    switch(type){
+    case 111:
+    case 113:
+    case 114:
+    case 115:
+    case 116:
+    case 117:
+    case 118:
+    case 119:
+    case 120:
+    case 133:
+    case 134:
+    case 135:
+    case 136:
+    case 137:
+    case 138:
+    case 198:
+    case 199:
+    case 200:
+    case 201:
+    case 202:
+    case 204:
+    case 216:
+    case 217:
+    case 218:
+    case 219:
+    case 220:
+    case 221:
+    case 222:
+    case 223:
+    case 224:
+    case 225:
+    case 226:
+    case 227:
+    case 228:
+    case 231:
+    case 232:
+    case 233:
+    case 234:
+    case 235:
+        weight = 2000;
+        break;
+    default:
+    weight =1;
+    break;
+    }
+
+    currentTile.init(tileName, x, y, w, h, weight);
 
     tiles.push_back(currentTile);
     }
-
 }
 
 //Map::~Map()
@@ -168,8 +216,8 @@ void Map::moveTilesDown(int distanceDown){
     //the commented out code below is what I want to do
     //for(pit = goodGuys.begin(); pit!=goodGuys.end(); pit++)
     //{
-    //  int height= pit->methodToGetCharactersHeight();
-    //  pit->methodToSetCharactersYvalue(distanceDown*(-height));
+    //  int height = pit.getComponent<Transformer>().position.x;
+    //pit.setCoordinates();
     //}
 }
 
