@@ -55,51 +55,8 @@ Map::Map(int mapID, int Rows, int Columns)
     Tile currentTile;
     weight = 1;
 
-    switch(type){
-    case 111:
-    case 113:
-    case 114:
-    case 115:
-    case 116:
-    case 117:
-    case 118:
-    case 119:
-    case 120:
-    case 133:
-    case 134:
-    case 135:
-    case 136:
-    case 137:
-    case 138:
-    case 198:
-    case 199:
-    case 200:
-    case 201:
-    case 202:
-    case 204:
-    case 216:
-    case 217:
-    case 218:
-    case 219:
-    case 220:
-    case 221:
-    case 222:
-    case 223:
-    case 224:
-    case 225:
-    case 226:
-    case 227:
-    case 228:
-    case 231:
-    case 232:
-    case 233:
-    case 234:
-    case 235:
+    if ( type == 111 || type >= 113 && type <= 120 || type >= 133 && type <= 138 || type >= 198 && type <= 202 || type ==204 || type >= 216 && type <= 228 || type >= 231 && type <= 235){
         weight = 2000;
-        break;
-    default:
-    weight =1;
-    break;
     }
 
     currentTile.init(tileName, x, y, w, h, weight);
