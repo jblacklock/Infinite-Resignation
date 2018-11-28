@@ -21,6 +21,7 @@ public:
 private:
     MenuScreen* menu;
     Map* currentMap;
+    vector<PlayerCharacter> goodGuys;
 
 };
 

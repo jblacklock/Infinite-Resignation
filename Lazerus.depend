@@ -1933,16 +1933,16 @@
 	"MainCharacterFactory.h"
 	<sstream>
 
-1543379847 c:\users\lenovo\documents\github\infinite-resignation\game\include\characters\character.h
+1543384206 c:\users\lenovo\documents\github\infinite-resignation\game\include\characters\character.h
 	"GameObject.h"
 	"components/Components.h"
 	"SDL2/SDL.h"
 	<iostream>
 
-1543107891 c:\users\lenovo\documents\github\infinite-resignation\game\include\characters\maincharacterfactory.h
+1543384102 c:\users\lenovo\documents\github\infinite-resignation\game\include\characters\maincharacterfactory.h
 	"PlayerCharacter.h"
 
-1543107891 c:\users\lenovo\documents\github\infinite-resignation\game\include\characters\playercharacter.h
+1543384039 c:\users\lenovo\documents\github\infinite-resignation\game\include\characters\playercharacter.h
 	"Characters/Character.h"
 
 1543107891 c:\users\lenovo\documents\github\infinite-resignation\game\include\menu\creditstate.h
@@ -1965,7 +1965,7 @@
 	"CreditState.h"
 	"GameState.h"
 
-1543107891 c:\users\lenovo\documents\github\infinite-resignation\game\include\gamestate.h
+1543384330 c:\users\lenovo\documents\github\infinite-resignation\game\include\gamestate.h
 	<string>
 	"WindowProperty.h"
 	"MenuState.h"
@@ -1986,19 +1986,20 @@
 	"WindowProperty.h"
 	"GameObject.h"
 
-1543107891 c:\users\lenovo\documents\github\infinite-resignation\game\include\map\map.h
+1543381190 c:\users\lenovo\documents\github\infinite-resignation\game\include\map\map.h
 	"Tile.h"
 	<list>
 
 1543107891 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\characters\enemycharacter.cpp
 
-1543379847 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\characters\playerchracter.cpp
+1543384071 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\characters\playerchracter.cpp
 	"Characters/PlayerCharacter.h"
 
-1543107891 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\gamestate.cpp
+1543387861 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\gamestate.cpp
 	"GameState.h"
+	<vector>
 
-1543107891 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\map\map.cpp
+1543388938 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\map\map.cpp
 	"Map/Map.h"
 	<fstream>
 	<stdio.h>
@@ -2006,6 +2007,7 @@
 	<iostream>
 	"Map/TileFactory.h"
 	"components/Components.h"
+	"PlayerCharacter.h"
 
 1543107891 c:\users\lenovo\documents\github\infinite-resignation\game\include\map\tilefactory.h
 	"Tile.h"
@@ -2025,7 +2027,7 @@
 	"Map/Tile.h"
 	<iostream>
 
-1543380115 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\menu\characterstate.cpp
+1543384132 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\menu\characterstate.cpp
 	"CharacterState.h"
 
 1543107891 source:c:\users\lenovo\documents\github\infinite-resignation\game\src\menu\creditstate.cpp

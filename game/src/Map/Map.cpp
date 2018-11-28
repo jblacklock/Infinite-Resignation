@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Map/TileFactory.h"
 #include "components/Components.h"
+#include "PlayerCharacter.h"
 using namespace std;
 
 SDL_Event e;
@@ -72,7 +73,6 @@ void Map::render()
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         it->render();
-
     }
 
 }
@@ -159,11 +159,18 @@ void Map::moveTilesUp(int distanceUp){
 
 void Map::moveTilesDown(int distanceDown){
      std::list<Tile>::iterator it;
+     std::vector<PlayerCharacter>::iterator pit;
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         int height= it->getH();
         it->setY(distanceDown*(-height));
     }
+    //the commented out code below is what I want to do
+    //for(pit = goodGuys.begin(); pit!=goodGuys.end(); pit++)
+    //{
+    //  int height= pit->methodToGetCharactersHeight();
+    //  pit->methodToSetCharactersYvalue(distanceDown*(-height));
+    //}
 }
 
 void Map::moveTilesRight(int distanceRight){

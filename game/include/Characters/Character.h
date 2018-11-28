@@ -22,7 +22,7 @@ class Character : public GameObject
     public:
         Character() = default;
         virtual ~Character(){};
-        virtual void init(char* name,Gender gender, char* sprite,char* fullSheet,int x,int y, int w, int h) = 0;
+        virtual void init(char* name,Gender gender, char* sprite,char* fullSheet,int x,int y, int w, int h,int SW,int SH) = 0;
         virtual void update() = 0;
         virtual void render() = 0;
         virtual void handleEvent() = 0;
@@ -40,7 +40,7 @@ class Character : public GameObject
         char* character;
         struct Attributes attributes={0};
         SDL_Texture* fullCharacterSheet;
-        int x,y,w,h;
+        int x,y,w,h,SW,SH;
 };
 
 #endif // CHARACTERSTATE_H

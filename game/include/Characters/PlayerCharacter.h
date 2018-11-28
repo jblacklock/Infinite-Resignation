@@ -6,14 +6,14 @@ class PlayerCharacter : public Character
     public:
         PlayerCharacter()= default;
         PlayerCharacter(const PlayerCharacter& other){
-            this->init(other.name,other.gender,other.sprite,other.character,other.x,other.y,other.w,other.h);
+            this->init(other.name,other.gender,other.sprite,other.character,other.x,other.y,other.w,other.h,other.SW,other.SH);
         } ;
         PlayerCharacter& operator=(const PlayerCharacter& other){
-            this->init(other.name,other.gender,other.sprite,other.character,other.x,other.y,other.w,other.h);
+            this->init(other.name,other.gender,other.sprite,other.character,other.x,other.y,other.w,other.h,other.SW,other.SH);
             return *this;
         }
         virtual ~PlayerCharacter();
-        void init(char* name,Gender gender, char* sprite,char* fullSheet,int x,int y, int w, int h);
+        void init(char* name,Gender gender, char* sprite,char* fullSheet,int x,int y, int w, int h,int SW,int SH);
         void update();
         void render();
         void handleEvent();
