@@ -25,7 +25,7 @@ private:
     kiss_button nextButton = {0};
     kiss_label name = {0};
     kiss_label maxHP = {0};
-    kiss_label agility = {0};
+    kiss_label defense = {0};
     kiss_label strength = {0};
     kiss_label luck = {0};
     kiss_label intelligence = {0};

@@ -33,29 +33,22 @@ void CharacterState::setCharacter(int value)
     ss << current.getName();
     kiss_label_new(&name,&WindowProperty::window,((char*)ss.str().c_str()),325,100);
     ss.str(std::string());
-    ss << "Level: ";
-    ss << current.getLevel();
     kiss_label_new(&level,&WindowProperty::window,((char*)ss.str().c_str()),350,250);
     ss.str(std::string());
-    ss << "Experience: ";
-    ss << current.getExperience();
     kiss_label_new(&xp,&WindowProperty::window,((char*)ss.str().c_str()),350,275);
     ss.str(std::string());
     ss << "Max Hp: ";
     ss << current.getMaxHP();
     kiss_label_new(&maxHP,&WindowProperty::window,((char*)ss.str().c_str()),350,300);
     ss.str(std::string());
-    ss << "Agility: ";
-    ss << current.getAgility();
-    kiss_label_new(&agility,&WindowProperty::window,(char*)ss.str().c_str(),350,325);
+    ss << "Defense: ";
+    ss << current.getDefense();
+    kiss_label_new(&defense,&WindowProperty::window,(char*)ss.str().c_str(),350,325);
     ss.str(std::string());
     ss << "Strength: ";
     ss << current.getStrength();
     kiss_label_new(&strength,&WindowProperty::window,(char*)ss.str().c_str(),350,350);
     ss.str(std::string());
-    ss << "Luck: ";
-    ss << current.getLuck();
-    kiss_label_new(&luck,&WindowProperty::window,(char*)ss.str().c_str(),350,375);
     ss.str(std::string());
     ss << "Intelligence: ";
     ss << current.getIntelligence();
@@ -64,12 +57,9 @@ void CharacterState::setCharacter(int value)
     nextButton.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
     previousButton.font.font =TTF_OpenFont("assets/fonts/standard.ttf", 20);
     maxHP.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
-    agility.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
+    defense.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
     strength.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
-    luck.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
     intelligence.font.font = TTF_OpenFont("assets/fonts/standard.ttf", 20);
-    xp.font.font=  TTF_OpenFont("assets/fonts/standard.ttf", 20);
-    level.font.font =  TTF_OpenFont("assets/fonts/standard.ttf", 20);
     name.font.font = TTF_OpenFont("assets/fonts/standard.ttf",30);
 }
 /**
@@ -82,12 +72,9 @@ void CharacterState::render()
     kiss_button_draw(&previousButton,WindowProperty::renderer);
     kiss_label_draw(&name,WindowProperty::renderer);
     kiss_label_draw(&maxHP,WindowProperty::renderer);
-    kiss_label_draw(&agility,WindowProperty::renderer);
+    kiss_label_draw(&defense,WindowProperty::renderer);
     kiss_label_draw(&strength,WindowProperty::renderer);
-    kiss_label_draw(&luck,WindowProperty::renderer);
     kiss_label_draw(&intelligence,WindowProperty::renderer);
-    kiss_label_draw(&level,WindowProperty::renderer);
-    kiss_label_draw(&xp,WindowProperty::renderer);
     current.render();
     current.renderFullSheet(5,25,300,450);
 }

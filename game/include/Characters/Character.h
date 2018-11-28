@@ -10,13 +10,10 @@ enum Gender{
 };
 
 struct Attributes {
-    int level;
-    int experience;
     int maxHP;
     int hp;
-    int agility;
+    int defense;
     int strength;
-    int luck;
     int intelligence;
 };
 
@@ -29,13 +26,10 @@ class Character : public GameObject
         virtual void update() = 0;
         virtual void render() = 0;
         virtual void handleEvent() = 0;
-        int getLevel(){return this->attributes.level;}
-        int getExperience(){return this->attributes.experience; }
         int getMaxHP(){return this->attributes.maxHP;}
         int getHP(){return this->attributes.hp;}
-        int getAgility(){return this->attributes.agility;}
+        int getDefense(){return this->attributes.defense;}
         int getStrength(){return this->attributes.strength;}
-        int getLuck(){return this->attributes.luck;}
         int getIntelligence(){return this->attributes.intelligence;}
         char* getName(){return this->name;}
         void setCoordinates(int x,int y){this->x=x;this->y=y;}

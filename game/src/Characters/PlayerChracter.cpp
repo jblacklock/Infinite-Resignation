@@ -36,13 +36,10 @@ void PlayerCharacter::handleEvent(){
 }
 
 void PlayerCharacter::setDefault(){
-    this->attributes.level = 0;
-    this->attributes.experience = 0;
     this->attributes.maxHP = 100;
     this->attributes.hp = 100;
-    this->attributes.agility = 10;
+    this->attributes.defense = 10;
     this->attributes.strength = 10;
-    this->attributes.luck = 10;
     this->attributes.intelligence = 10;
 }
 
