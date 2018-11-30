@@ -7,9 +7,11 @@ class PlayerCharacter : public Character
         PlayerCharacter()= default;
         PlayerCharacter(const PlayerCharacter& other){
             this->init(other.name,other.gender,other.sprite,other.character,other.x,other.y,other.w,other.h,other.SW,other.SH);
+            this->setMap(other.m);
         } ;
         PlayerCharacter& operator=(const PlayerCharacter& other){
             this->init(other.name,other.gender,other.sprite,other.character,other.x,other.y,other.w,other.h,other.SW,other.SH);
+            this->setMap(other.m);
             return *this;
         }
         virtual ~PlayerCharacter();

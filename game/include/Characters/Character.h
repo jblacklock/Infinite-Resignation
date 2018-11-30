@@ -4,6 +4,7 @@
 #include "components/Components.h"
 #include "SDL2/SDL.h"
 #include <iostream>
+#include "Map/Map.h"
 enum Gender{
     MALE,
     FEMALE
@@ -33,6 +34,7 @@ class Character : public GameObject
         int getIntelligence(){return this->attributes.intelligence;}
         char* getName(){return this->name;}
         void setCoordinates(int x,int y){this->x=x;this->y=y;}
+        void setMap(Map* m){this->m = m;};
     protected:
         char* name;
         Gender gender;
@@ -41,6 +43,7 @@ class Character : public GameObject
         struct Attributes attributes={0};
         SDL_Texture* fullCharacterSheet;
         int x,y,w,h,SW,SH;
+        Map* m;
 };
 
 #endif // CHARACTERSTATE_H

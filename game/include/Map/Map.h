@@ -17,7 +17,11 @@ class Map
         void moveTilesDown(int distanceDown);
         void moveTilesRight(int distanceRight);
         void moveTilesLeft(int distanceLeft);
-
+        void resetListener();
+        bool canMoveUp = false;
+        bool canMoveDown = false;
+        bool canMoveLeft = false;
+        bool canMoveRight = false;
     protected:
 
     private:

@@ -81,17 +81,22 @@ void Map::render()
     }
 
 }
-
+void Map::resetListener(){
+    canMoveDown=false;
+    canMoveLeft=false;
+    canMoveRight=false;
+    canMoveUp= false;
+}
 void Map::eventHandle()
 {
 ///to be implemented
 ///if((x<10)||(x>490)||(y<10)||(y>490))
 ///change the x and y of all the tiles in the map
     if(WindowProperty::event.type == SDL_KEYDOWN){
+            resetListener();
                     switch(WindowProperty::event.key.keysym.sym){
                     case SDLK_w:
                         {
-                            bool canMoveUp = false;
                             std::list<Tile>::iterator it;
                             for(it = tiles.begin(); it!=tiles.end(); ++it)
                             {
@@ -103,7 +108,6 @@ void Map::eventHandle()
                     break;
                      case SDLK_a:
                         {
-                            bool canMoveLeft = false;
                             std::list<Tile>::iterator it;
                             for(it = tiles.begin(); it!=tiles.end(); ++it)
                             {
@@ -115,7 +119,6 @@ void Map::eventHandle()
                     break;
                      case SDLK_s:
                          {
-                            bool canMoveDown = false;
                             std::list<Tile>::iterator it;
                             for(it = tiles.begin(); it!=tiles.end(); ++it)
                             {
@@ -127,7 +130,6 @@ void Map::eventHandle()
                     break;
                      case SDLK_d:
                             {
-                            bool canMoveRight = false;
                             std::list<Tile>::iterator it;
                             for(it = tiles.begin(); it!=tiles.end(); ++it)
                             {
