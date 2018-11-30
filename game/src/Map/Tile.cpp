@@ -13,9 +13,8 @@ Tile::~Tile()
 
 
 
-void Tile::init(char* sprite, int x, int y, int w, int h)
+void Tile::init(char* sprite, int x, int y, int w, int h, int weight)
 {
-
     this->sprite = sprite;
     this->x = x;
     this->y = y;
@@ -23,7 +22,7 @@ void Tile::init(char* sprite, int x, int y, int w, int h)
     this->h = h;
     this->addComponent<TransformComponent>(x,y,w,h);
     this->addComponent<SpriteRenderer>(sprite, 64, 64);
-
+    this->weight = weight;
 }
 
 void Tile::render(){

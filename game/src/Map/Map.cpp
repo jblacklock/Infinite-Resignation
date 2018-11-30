@@ -5,6 +5,8 @@
 #include <iostream>
 #include "Map/TileFactory.h"
 #include "components/Components.h"
+#include "PlayerCharacter.h"
+
 using namespace std;
 
 SDL_Event e;
@@ -51,12 +53,16 @@ Map::Map(int mapID, int Rows, int Columns)
         else i++;
 
     Tile currentTile;
+    weight = 1;
 
-    currentTile.init(tileName, x, y, w, h);
+    if ( type == 111 || type >= 113 && type <= 120 || type >= 133 && type <= 138 || type >= 198 && type <= 202 || type ==204 || type >= 216 && type <= 228 || type >= 231 && type <= 235){
+        weight = 2000;
+    }
+
+    currentTile.init(tileName, x, y, w, h, weight);
 
     tiles.push_back(currentTile);
     }
-
 }
 
 //Map::~Map()
@@ -72,7 +78,6 @@ void Map::render()
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         it->render();
-
     }
 
 }
@@ -159,11 +164,18 @@ void Map::moveTilesUp(int distanceUp){
 
 void Map::moveTilesDown(int distanceDown){
      std::list<Tile>::iterator it;
+     std::vector<PlayerCharacter>::iterator pit;
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         int height= it->getH();
         it->setY(distanceDown*(-height));
     }
+    //the commented out code below is what I want to do
+    //for(pit = goodGuys.begin(); pit!=goodGuys.end(); pit++)
+    //{
+    //  int height = pit.getComponent<Transformer>().position.x;
+    //pit.setCoordinates();
+    //}
 }
 
 void Map::moveTilesRight(int distanceRight){

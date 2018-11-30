@@ -1,6 +1,6 @@
 #include "Characters/PlayerCharacter.h"
 
-void PlayerCharacter::init(char* name,Gender gender,char* sprite,char* fullCharacter,int x,int y, int w, int h){
+void PlayerCharacter::init(char* name,Gender gender,char* sprite,char* fullCharacter,int x,int y, int w, int h,int SW, int SH){
     this->name = name;
     this->gender = gender;
     this->sprite = sprite;
@@ -9,7 +9,9 @@ void PlayerCharacter::init(char* name,Gender gender,char* sprite,char* fullChara
     this->y = y;
     this->w = w;
     this->h = h;
-    this->addComponent<TransformComponent>(x,y,100,100);
+    this->SW = SW;
+    this->SH =SH;
+    this->addComponent<TransformComponent>(x,y,SW,SH);
     this->addComponent<SpriteRenderer>(sprite,w,h,2,3,60);
     this->addComponent<ColliderComponent>(name);
     SDL_Surface* tempSurface = IMG_Load(this->character);
