@@ -2,29 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="game_engine\include\WindowProperty.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="game\src\Menu\MenuScreen.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="779" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="game_engine\include\Window.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="723" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="game\src\Menu\MainState.cpp" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4856" topLine="83" />
+			<Cursor1 position="228" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="game_engine\include\components\TransformComponent.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="999" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="game_engine\src\Vector2D.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="361" topLine="12" />
+			<Cursor1 position="999" topLine="17" />
 		</Cursor>
 	</File>
 	<File name="game_engine\include\Media.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -32,9 +17,14 @@
 			<Cursor1 position="56" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="game\src\AssetHandler.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="game\include\GameState.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="281" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\include\Characters\Character.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1134" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="game_engine\src\Media.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -42,27 +32,22 @@
 			<Cursor1 position="196" topLine="7" />
 		</Cursor>
 	</File>
-	<File name="game_engine\include\components\SpriteRenderer.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="game_engine\include\WindowProperty.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1467" topLine="26" />
+			<Cursor1 position="779" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="game\src\Map\Map.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="game\include\Characters\EnemyCharacter.h" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="76" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="game\src\Characters\PlayerChracter.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="game_engine\include\components\ComponentManager.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="1589" topLine="44" />
 		</Cursor>
 	</File>
-	<File name="game\src\Map\MapGenerator.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="game\src\Characters\EnemyCharacter.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="game\src\Map\MapGenerator.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
@@ -72,9 +57,24 @@
 			<Cursor1 position="2932" topLine="76" />
 		</Cursor>
 	</File>
-	<File name="game_engine\include\components\ComponentManager.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="game\src\Menu\MainState.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1589" topLine="44" />
+			<Cursor1 position="4856" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="game\include\Characters\PlayerCharacter.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1089" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game_engine\src\WindowProperty.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1076" topLine="28" />
+		</Cursor>
+	</File>
+	<File name="game\src\GameState.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2218" topLine="63" />
 		</Cursor>
 	</File>
 	<File name="game_engine\include\GameObject.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -82,9 +82,49 @@
 			<Cursor1 position="972" topLine="3" />
 		</Cursor>
 	</File>
-	<File name="game_engine\src\WindowProperty.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="game\src\Map\Map.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1076" topLine="28" />
+			<Cursor1 position="1868" topLine="161" />
+		</Cursor>
+	</File>
+	<File name="game_engine\include\components\SpriteRenderer.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1467" topLine="26" />
+		</Cursor>
+	</File>
+	<File name="game_engine\include\Window.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="723" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game_engine\src\Vector2D.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="361" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="game\src\AssetHandler.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\src\Characters\PlayerChracter.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2529" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\src\Characters\EnemyCharacter.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\include\Map\Map.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="522" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="game\src\Map\Tile.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="46" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

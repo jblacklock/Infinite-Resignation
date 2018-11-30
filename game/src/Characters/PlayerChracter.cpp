@@ -35,6 +35,7 @@ void PlayerCharacter::render()
 void PlayerCharacter::update()
 {
     GameObject::update();
+    this->updateMovableSpaces();
 }
 bool checkClick,endClick;
 void PlayerCharacter::handleEvent()
