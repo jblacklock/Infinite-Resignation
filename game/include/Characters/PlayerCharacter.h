@@ -21,7 +21,9 @@ class PlayerCharacter : public Character
         void handleEvent();
         void setDefault();
         void renderFullSheet(int x,int y, int w, int h);
-
+        void updateMovableSpaces();
+    private:
+        SDL_Rect moveSpaces[13];
 };
 
 #endif // CHARACTERSTATE_H

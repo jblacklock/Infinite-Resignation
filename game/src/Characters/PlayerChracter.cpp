@@ -35,6 +35,7 @@ void PlayerCharacter::render()
 void PlayerCharacter::update()
 {
     GameObject::update();
+    this->updateMovableSpaces();
 }
 bool checkClick,endClick;
 void PlayerCharacter::handleEvent()
@@ -81,4 +82,9 @@ void PlayerCharacter::renderFullSheet(int x, int y,int w, int h)
     SDL_RenderCopy(WindowProperty::renderer,this->fullCharacterSheet,&src,&dst);
 }
 
+void PlayerCharacter::updateMovableSpaces(){
+    for(int i=0; i<3; i++){}
+    for(int i=0; i<2; i++){}
+
+}
 
