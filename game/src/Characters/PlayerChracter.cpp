@@ -81,4 +81,51 @@ void PlayerCharacter::renderFullSheet(int x, int y,int w, int h)
     SDL_RenderCopy(WindowProperty::renderer,this->fullCharacterSheet,&src,&dst);
 }
 
+void PlayerCharacter::Attack(
+//EnemyCharacter victim
+){
+
+//victim.reduceHP(this->attributes.strength);
+
+}
+
+
+
+void PlayerCharacter::Heal(PlayerCharacter patient){
+
+patient.increaseHP(this->attributes.intelligence);
+
+}
+
+void PlayerCharacter::Defend(PlayerCharacter AllyBeingDefended){
+
+    //remove allybeingdefended from goodguys
+    //allow for them to return if the defender gets damaged
+
+}
+
+
+
+vector<PlayerCharacter> PlayerCharacter::DetermineHealableCharacters(){
+vector<PlayerCharacter> HealableCharacters;
+int healingDistance = (this->attributes.healingRange);
+//for(int i=0; i<goodGuys.size(); i++){
+//    if(goodGuys[i].getComponent<Transformer>().position.x > xlower || goodGuys[i].getComponent<Transformer>().position.x > xhigher){
+//        HealableCharacters.push_back(goodGuys[i]);
+//    }
+//}
+return HealableCharacters;
+}
+
+
+
+vector<PlayerCharacter> PlayerCharacter::DetermineDefendableCharacters(){
+
+}
+
+
+
+//vector<EnemyCharacter> PlayerCharacter::DetermineEnemiesInRange(){
+
+//}
 

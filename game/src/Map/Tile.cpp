@@ -23,6 +23,7 @@ void Tile::init(char* sprite, int x, int y, int w, int h, int weight)
     this->addComponent<TransformComponent>(x,y,w,h);
     this->addComponent<SpriteRenderer>(sprite, 64, 64);
     this->weight = weight;
+    cout << this->w << endl;
 }
 
 void Tile::render(){

@@ -21,6 +21,14 @@ class PlayerCharacter : public Character
         void handleEvent();
         void setDefault();
         void renderFullSheet(int x,int y, int w, int h);
+        void Heal(PlayerCharacter patient);
+        void Attack(
+        //EnemyCharacter victim
+                    );
+        void Defend(PlayerCharacter AllyBeingDefended);
+        vector<PlayerCharacter> DetermineHealableCharacters();
+        vector<PlayerCharacter> DetermineDefendableCharacters();
+        //vector<EnemyCharacter> DetermineEnemiesInRange();
 
 };
 

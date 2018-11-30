@@ -16,6 +16,8 @@ struct Attributes {
     int defense;
     int strength;
     int intelligence;
+    int attackRange;
+    int healingRange;
 };
 
 class Character : public GameObject
@@ -35,6 +37,10 @@ class Character : public GameObject
         char* getName(){return this->name;}
         void setCoordinates(int x,int y){this->x=x;this->y=y;}
         void setMap(Map* m){this->m = m;};
+        void setHP(int newHP){ this->attributes.hp = newHP;}
+        void reduceHP(int damage){ this->attributes.hp = (this->attributes.hp) - damage;}
+        void increaseHP(int health){ this->attributes.hp = (this->attributes.hp) + health;}
+
     protected:
         char* name;
         Gender gender;
