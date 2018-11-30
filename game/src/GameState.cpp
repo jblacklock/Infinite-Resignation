@@ -56,6 +56,8 @@ default:
     }
     PlayerCharacter Ahri = MainCharacterFactory::createPlayableCharacter(1, Ahrix, Ahriy,50, 50);
     PlayerCharacter Rose = MainCharacterFactory::createPlayableCharacter(2, Rosex, Rosey,50,50);
+    Ahri.setMap(this->currentMap);
+    Rose.setMap(this->currentMap);
     goodGuys.push_back(Ahri);
     goodGuys.push_back(Rose);
     }
@@ -93,5 +95,9 @@ void GameState::render()
 void GameState::handleEvent()
 {
     currentMap->eventHandle();
+    for(int i=0; i < goodGuys.size(); i++){
+        goodGuys[i].handleEvent();
+    }
+    currentMap->resetListener();
 }
 

@@ -1378,7 +1378,7 @@
 1543106895 source:d:\code\c++ projects\infinite-resignation\game_engine\src\windowproperty.cpp
 	"WindowProperty.h"
 
-1543106894 source:d:\code\c++ projects\infinite-resignation\game\src\menu\menuscreen.cpp
+1543547682 source:d:\code\c++ projects\infinite-resignation\game\src\menu\menuscreen.cpp
 	"Menu/MenuScreen.h"
 
 1543106894 d:\code\c++ projects\infinite-resignation\game\include\menu\menuscreen.h
@@ -1408,34 +1408,35 @@
 	"components/ComponentManager.h"
 	<typeinfo>
 
-1543107468 d:\code\c++ projects\infinite-resignation\game\include\menu\characterstate.h
+1543545474 d:\code\c++ projects\infinite-resignation\game\include\menu\characterstate.h
 	"MenuScreen.h"
 	<MenuState.h>
 	"Characters/Character.h"
 	"MainCharacterFactory.h"
 	<sstream>
 
-1543106894 source:d:\code\c++ projects\infinite-resignation\game\src\menu\characterstate.cpp
+1543546141 source:d:\code\c++ projects\infinite-resignation\game\src\menu\characterstate.cpp
 	"CharacterState.h"
 
 1543106894 source:d:\code\c++ projects\infinite-resignation\game\src\characters\enemycharacter.cpp
 
-1543106894 source:d:\code\c++ projects\infinite-resignation\game\src\characters\playerchracter.cpp
+1543552010 source:d:\code\c++ projects\infinite-resignation\game\src\characters\playerchracter.cpp
 	"Characters/PlayerCharacter.h"
 
-1543106894 d:\code\c++ projects\infinite-resignation\game\include\characters\playercharacter.h
+1543551068 d:\code\c++ projects\infinite-resignation\game\include\characters\playercharacter.h
 	"Characters/Character.h"
 
-1543106894 d:\code\c++ projects\infinite-resignation\game\include\characters\character.h
+1543551190 d:\code\c++ projects\infinite-resignation\game\include\characters\character.h
 	"GameObject.h"
 	"components/Components.h"
 	"SDL2/SDL.h"
 	<iostream>
+	"Map/Map.h"
 
 1541741085 source:d:\code\c++ projects\infinite-resignation\game\src\characters\maincharacterfactory.cpp
 	"MainCharacterFactory.h"
 
-1543106894 d:\code\c++ projects\infinite-resignation\game\include\characters\maincharacterfactory.h
+1543546141 d:\code\c++ projects\infinite-resignation\game\include\characters\maincharacterfactory.h
 	"PlayerCharacter.h"
 
 1543106894 d:\code\c++ projects\infinite-resignation\game\include\menu\creditstate.h
@@ -1459,7 +1460,7 @@
 1543106894 d:\code\c++ projects\infinite-resignation\game\include\map\mapgenerator.h
 	"Tile.h"
 
-1543106894 d:\code\c++ projects\infinite-resignation\game\include\map\tile.h
+1543546247 d:\code\c++ projects\infinite-resignation\game\include\map\tile.h
 	<stdio.h>
 	<string.h>
 	"SDL2/SDL.h"
@@ -1467,7 +1468,7 @@
 	"WindowProperty.h"
 	"GameObject.h"
 
-1543106894 source:d:\code\c++ projects\infinite-resignation\game\src\map\tile.cpp
+1543546247 source:d:\code\c++ projects\infinite-resignation\game\src\map\tile.cpp
 	"Map/Tile.h"
 	<iostream>
 	"components/Components.h"
@@ -1480,7 +1481,7 @@
 1543106894 d:\code\c++ projects\infinite-resignation\game\include\map\tilefactory.h
 	"Tile.h"
 
-1543106894 source:d:\code\c++ projects\infinite-resignation\game\src\map\map.cpp
+1543551455 source:d:\code\c++ projects\infinite-resignation\game\src\map\map.cpp
 	"Map/Map.h"
 	<fstream>
 	<stdio.h>
@@ -1488,8 +1489,9 @@
 	<iostream>
 	"Map/TileFactory.h"
 	"components/Components.h"
+	"PlayerCharacter.h"
 
-1543106894 d:\code\c++ projects\infinite-resignation\game\include\map\map.h
+1543551404 d:\code\c++ projects\infinite-resignation\game\include\map\map.h
 	"Tile.h"
 	<list>
 
@@ -1507,10 +1509,11 @@
 	"CreditState.h"
 	"GameState.h"
 
-1543106894 source:d:\code\c++ projects\infinite-resignation\game\src\gamestate.cpp
+1543552169 source:d:\code\c++ projects\infinite-resignation\game\src\gamestate.cpp
 	"GameState.h"
+	<vector>
 
-1543106894 d:\code\c++ projects\infinite-resignation\game\include\gamestate.h
+1543551081 d:\code\c++ projects\infinite-resignation\game\include\gamestate.h
 	<string>
 	"WindowProperty.h"
 	"MenuState.h"
@@ -1519,6 +1522,7 @@
 	"MenuScreen.h"
 	"Map/MapGenerator.h"
 	"Map/Map.h"
+	"PlayerCharacter.h"
 
 1543107892 c:\users\lenovo\documents\github\infinite-resignation\game_engine\external_libraries\gui\kiss_sdl.h
 	<SDL.h>
