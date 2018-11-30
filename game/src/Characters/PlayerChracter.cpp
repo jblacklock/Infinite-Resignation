@@ -46,7 +46,8 @@ void PlayerCharacter::handleEvent()
         if( this->x < mouseX  &&
                 this->y < mouseY  &&
                 this->w+this->x > mouseX &&
-                this->h+this->y > mouseY)
+                this->h+this->y > mouseY
+                )
         {
             printf("CLICKED\n");
         }
