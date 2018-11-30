@@ -8,7 +8,7 @@
 #include "MenuScreen.h"
 #include "Map/MapGenerator.h"
 #include "Map/Map.h"
-
+#include "PlayerCharacter.h"
 class MenuScreen;
 class GameState : public MenuState
 {
