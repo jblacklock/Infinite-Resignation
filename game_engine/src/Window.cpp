@@ -31,6 +31,7 @@ Window::Window() {
         WindowProperty::window.visible=1;
         // Set background to white
         SDL_SetRenderDrawColor(WindowProperty::renderer,255,255,255,255);
+        SDL_SetRenderDrawBlendMode(WindowProperty::renderer, SDL_BLENDMODE_BLEND);
         int frameStart = SDL_GetTicks();
         asset.init();
         // Load Loading Screen

@@ -16,51 +16,53 @@ GameState::GameState(MenuScreen* menu,int Level)
     int Rosex = 0;
     int Rosey = 0;
 
-    switch (Level){
-case 1:
-    Ahrix = 400;
-    Ahriy = 0;
-    Rosex = 450;
-    Rosey = 50;
-    currentMap->moveTilesDown(1);
-    currentMap->moveTilesRight(3);
-    break;
-case 2:
-    Ahrix = 250;
-    Ahriy = 0;
-    Rosex = 400;
-    Rosey = 0;
-    currentMap->moveTilesRight(1);
-    break;
-case 3:
-    Ahrix = 300;
-    Ahriy = 300;
-    Rosex = 400;
-    Rosey = 300;
-    currentMap->moveTilesDown(20);
-    currentMap->moveTilesRight(10);
-    break;
-case 4:
-    Ahrix = 50;
-    Ahriy = 250;
-    Rosex = 50;
-    Rosey = 350;
-    currentMap->moveTilesDown(4);
-    break;
-default:
-    Ahrix = 0;
-    Ahriy = 0;
-    Rosex = 0;
-    Rosey = 0;
-    break;
+    switch (Level)
+    {
+    case 1:
+        Ahrix = 400;
+        Ahriy = 0;
+        Rosex = 450;
+        Rosey = 50;
+        currentMap->moveTilesDown(1);
+        currentMap->moveTilesRight(3);
+        break;
+    case 2:
+        Ahrix = 250;
+        Ahriy = 0;
+        Rosex = 400;
+        Rosey = 0;
+        currentMap->moveTilesRight(1);
+        break;
+    case 3:
+        Ahrix = 300;
+        Ahriy = 300;
+        Rosex = 400;
+        Rosey = 300;
+        currentMap->moveTilesDown(20);
+        currentMap->moveTilesRight(10);
+        break;
+    case 4:
+        Ahrix = 50;
+        Ahriy = 250;
+        Rosex = 50;
+        Rosey = 350;
+        currentMap->moveTilesDown(4);
+        break;
+    default:
+        Ahrix = 0;
+        Ahriy = 0;
+        Rosex = 0;
+        Rosey = 0;
+        break;
     }
     PlayerCharacter Ahri = MainCharacterFactory::createPlayableCharacter(1, Ahrix, Ahriy,50, 50);
     PlayerCharacter Rose = MainCharacterFactory::createPlayableCharacter(2, Rosex, Rosey,50,50);
+    PlayerCharacter::numberOfCharacters = 2;
     Ahri.setMap(this->currentMap);
     Rose.setMap(this->currentMap);
     goodGuys.push_back(Ahri);
     goodGuys.push_back(Rose);
-    }
+}
 /**
     Default Constructor
 */
@@ -71,8 +73,16 @@ GameState::~GameState() {}
 void GameState::update()
 {
     currentMap->updateTile();
-        for(int i=0; i < goodGuys.size(); i++){
+    for(int i=0; i < goodGuys.size(); i++)
+    {
         goodGuys[i].update();
+    }
+    if(PlayerCharacter::checkPlayerTurnEnd())
+    {
+        for(int i=0; i < goodGuys.size(); i++)
+        {
+            goodGuys[i].reset();
+        }
     }
 }
 /**
@@ -81,7 +91,8 @@ void GameState::update()
 void GameState::render()
 {
     currentMap->render();
-    for(int i=0; i < goodGuys.size(); i++){
+    for(int i=0; i < goodGuys.size(); i++)
+    {
         goodGuys[i].render();
     }
 }
@@ -95,7 +106,8 @@ void GameState::render()
 void GameState::handleEvent()
 {
     currentMap->eventHandle();
-    for(int i=0; i < goodGuys.size(); i++){
+    for(int i=0; i < goodGuys.size(); i++)
+    {
         goodGuys[i].handleEvent();
     }
     currentMap->resetListener();

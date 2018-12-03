@@ -22,8 +22,16 @@ class PlayerCharacter : public Character
         void setDefault();
         void renderFullSheet(int x,int y, int w, int h);
         void updateMovableSpaces();
+        void reset();
+        static bool checkPlayerTurnEnd();
+        static int numberOfCharacters;
+        static int numberOfCharacterMoved;
     private:
-        SDL_Rect moveSpaces[13];
+        SDL_Rect moveSpaces[12];
+        bool showMove,checkClick,moveEnd,turnEnd;
+        int moveX,moveY;
+
+
 };
 
 #endif // CHARACTERSTATE_H
