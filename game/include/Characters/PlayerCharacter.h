@@ -23,14 +23,22 @@ class PlayerCharacter : public Character
         void renderFullSheet(int x,int y, int w, int h);
         void updateMovableSpaces();
         void reset();
+        void endTheCharacterTurn();
+        void showTileAttack();
+        int attackEnemy();
         static bool checkPlayerTurnEnd();
         static int numberOfCharacters;
         static int numberOfCharacterMoved;
+        static char* characterInFocus;
+        static char* endCharacterTurn;
+        static char* attackCharacterTurn;
+        static int attackX,attackY;
+        static vector<Vector2D> playerPositions;
+        static vector<Vector2D> enemyPositions;
     private:
         SDL_Rect moveSpaces[12];
-        bool showMove,checkClick,moveEnd,turnEnd;
+        bool showMove,showOptions,checkClick,canAttack,showAttack,moveEnd,turnEnd;
         int moveX,moveY;
-
 
 };
 

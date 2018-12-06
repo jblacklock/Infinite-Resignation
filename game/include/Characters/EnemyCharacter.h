@@ -21,7 +21,13 @@ class EnemyCharacter : public Character
         void render();
         void handleEvent();
         void setDefault();
-
+        void moveCloser();
+        bool attacked(int value);
+        static vector<Vector2D> playerPositions;
+        static vector<Vector2D> enemyPositions;
+    private:
+        int moveX,moveY;
+        bool dead;
 };
 
 

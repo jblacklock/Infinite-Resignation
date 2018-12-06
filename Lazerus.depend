@@ -1378,7 +1378,7 @@
 1543829456 source:d:\code\c++ projects\infinite-resignation\game_engine\src\windowproperty.cpp
 	"WindowProperty.h"
 
-1543555575 source:d:\code\c++ projects\infinite-resignation\game\src\menu\menuscreen.cpp
+1544064895 source:d:\code\c++ projects\infinite-resignation\game\src\menu\menuscreen.cpp
 	"Menu/MenuScreen.h"
 
 1543106894 d:\code\c++ projects\infinite-resignation\game\include\menu\menuscreen.h
@@ -1402,7 +1402,7 @@
 1543107323 source:d:\code\c++ projects\infinite-resignation\game\src\menu\mainstate.cpp
 	"MainState.h"
 
-1543106895 d:\code\c++ projects\infinite-resignation\game_engine\include\gameobject.h
+1544095316 d:\code\c++ projects\infinite-resignation\game_engine\include\gameobject.h
 	<iostream>
 	<string>
 	"components/ComponentManager.h"
@@ -1418,13 +1418,13 @@
 1543546141 source:d:\code\c++ projects\infinite-resignation\game\src\menu\characterstate.cpp
 	"CharacterState.h"
 
-1543555604 source:d:\code\c++ projects\infinite-resignation\game\src\characters\enemycharacter.cpp
+1544095538 source:d:\code\c++ projects\infinite-resignation\game\src\characters\enemycharacter.cpp
 	"EnemyCharacter.h"
 
-1543875759 source:d:\code\c++ projects\infinite-resignation\game\src\characters\playerchracter.cpp
+1544094082 source:d:\code\c++ projects\infinite-resignation\game\src\characters\playerchracter.cpp
 	"Characters/PlayerCharacter.h"
 
-1543875582 d:\code\c++ projects\infinite-resignation\game\include\characters\playercharacter.h
+1544087099 d:\code\c++ projects\infinite-resignation\game\include\characters\playercharacter.h
 	"Characters/Character.h"
 
 1543793867 d:\code\c++ projects\infinite-resignation\game\include\characters\character.h
@@ -1482,7 +1482,7 @@
 1543106894 d:\code\c++ projects\infinite-resignation\game\include\map\tilefactory.h
 	"Tile.h"
 
-1543552892 source:d:\code\c++ projects\infinite-resignation\game\src\map\map.cpp
+1544061701 source:d:\code\c++ projects\infinite-resignation\game\src\map\map.cpp
 	"Map/Map.h"
 	<fstream>
 	<stdio.h>
@@ -1510,11 +1510,12 @@
 	"CreditState.h"
 	"GameState.h"
 
-1543875660 source:d:\code\c++ projects\infinite-resignation\game\src\gamestate.cpp
+1544096276 source:d:\code\c++ projects\infinite-resignation\game\src\gamestate.cpp
 	"GameState.h"
 	<vector>
+	<ctime>
 
-1543552892 d:\code\c++ projects\infinite-resignation\game\include\gamestate.h
+1544096296 d:\code\c++ projects\infinite-resignation\game\include\gamestate.h
 	<string>
 	"WindowProperty.h"
 	"MenuState.h"
@@ -1524,6 +1525,7 @@
 	"Map/MapGenerator.h"
 	"Map/Map.h"
 	"PlayerCharacter.h"
+	"EnemyCharacter.h"
 
 1543107892 c:\users\lenovo\documents\github\infinite-resignation\game_engine\external_libraries\gui\kiss_sdl.h
 	<SDL.h>
@@ -2060,6 +2062,6 @@
 1543107892 source:c:\users\lenovo\documents\github\infinite-resignation\game_engine\external_libraries\gui\kiss_widgets.c
 	"kiss_sdl.h"
 
-1543555575 d:\code\c++ projects\infinite-resignation\game\include\characters\enemycharacter.h
+1544095491 d:\code\c++ projects\infinite-resignation\game\include\characters\enemycharacter.h
 	"Characters/Character.h"
 
