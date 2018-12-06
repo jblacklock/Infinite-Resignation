@@ -11,10 +11,12 @@ class Tile : public GameObject
 {
 public:
     Tile() = default;
-    Tile(const Tile& other){
+    Tile(const Tile& other)
+    {
         this->init(other.sprite,other.x,other.y,other.w,other.h,other.weight);
     }
-    Tile& operator=(const Tile& other){
+    Tile& operator=(const Tile& other)
+    {
         this->init(other.sprite,other.x,other.y,other.w,other.h,other.weight);
         return *this;
     }

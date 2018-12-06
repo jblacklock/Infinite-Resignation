@@ -11,6 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="game/include" />
@@ -23,6 +24,7 @@
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="game/include" />
@@ -54,6 +56,7 @@
 		<Unit filename="game/include/Characters/EnemyCharacter.h" />
 		<Unit filename="game/include/Characters/MainCharacterFactory.h" />
 		<Unit filename="game/include/Characters/PlayerCharacter.h" />
+		<Unit filename="game/include/EndGameState.h" />
 		<Unit filename="game/include/GameState.h" />
 		<Unit filename="game/include/Map/Map.h" />
 		<Unit filename="game/include/Map/MapGenerator.h" />
@@ -68,6 +71,7 @@
 		<Unit filename="game/src/AssetHandler.cpp" />
 		<Unit filename="game/src/Characters/EnemyCharacter.cpp" />
 		<Unit filename="game/src/Characters/PlayerChracter.cpp" />
+		<Unit filename="game/src/EndGameState.cpp" />
 		<Unit filename="game/src/GameState.cpp" />
 		<Unit filename="game/src/Map/Map.cpp" />
 		<Unit filename="game/src/Map/MapGenerator.cpp" />

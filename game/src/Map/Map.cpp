@@ -44,24 +44,27 @@ Map::Map(int mapID, int Rows, int Columns)
         x *= i;
         y *= j;
 
-    tileCount++;
+        tileCount++;
 
-        if(i==columns-1){
+        if(i==columns-1)
+        {
             i=0;
             j++;
         }
-        else i++;
+        else
+            i++;
 
-    Tile currentTile;
-    weight = 1;
+        Tile currentTile;
+        weight = 1;
 
-    if ( type == 111 || type >= 113 && type <= 120 || type >= 133 && type <= 138 || type >= 198 && type <= 202 || type ==204 || type >= 216 && type <= 228 || type >= 231 && type <= 235){
-        weight = 2000;
-    }
+        if ( type == 111 || type >= 113 && type <= 120 || type >= 133 && type <= 138 || type >= 198 && type <= 202 || type ==204 || type >= 216 && type <= 228 || type >= 231 && type <= 235)
+        {
+            weight = 2000;
+        }
 
-    currentTile.init(tileName, x, y, w, h, weight);
+        currentTile.init(tileName, x, y, w, h, weight);
 
-    tiles.push_back(currentTile);
+        tiles.push_back(currentTile);
     }
 }
 
@@ -81,7 +84,8 @@ void Map::render()
     }
 
 }
-void Map::resetListener(){
+void Map::resetListener()
+{
     canMoveDown=false;
     canMoveLeft=false;
     canMoveRight=false;
@@ -92,61 +96,91 @@ void Map::eventHandle()
 ///to be implemented
 ///if((x<10)||(x>490)||(y<10)||(y>490))
 ///change the x and y of all the tiles in the map
-    if(WindowProperty::event.type == SDL_KEYDOWN){
-            resetListener();
-                    switch(WindowProperty::event.key.keysym.sym){
-                    case SDLK_w:
-                        {
-                            std::list<Tile>::iterator it;
-                            for(it = tiles.begin(); it!=tiles.end(); ++it)
-                            {
-                                int t = it->getComponent<TransformComponent>().position.y;
-                                if(t<0){canMoveUp = true; break;}
-                            }
-                        if(canMoveUp ==true ){moveTilesUp(1);}
-                        }
+    if(WindowProperty::event.type == SDL_KEYDOWN)
+    {
+        resetListener();
+        switch(WindowProperty::event.key.keysym.sym)
+        {
+        case SDLK_w:
+        {
+            std::list<Tile>::iterator it;
+            for(it = tiles.begin(); it!=tiles.end(); ++it)
+            {
+                int t = it->getComponent<TransformComponent>().position.y;
+                if(t<0)
+                {
+                    canMoveUp = true;
                     break;
-                     case SDLK_a:
-                        {
-                            std::list<Tile>::iterator it;
-                            for(it = tiles.begin(); it!=tiles.end(); ++it)
-                            {
-                                int t = it->getComponent<TransformComponent>().position.x;
-                                if(t<0){canMoveLeft = true; break;}
-                            }
-                        if(canMoveLeft ==true ){moveTilesLeft(1);}
-                        }
+                }
+            }
+            if(canMoveUp ==true )
+            {
+                moveTilesUp(1);
+            }
+        }
+        break;
+        case SDLK_a:
+        {
+            std::list<Tile>::iterator it;
+            for(it = tiles.begin(); it!=tiles.end(); ++it)
+            {
+                int t = it->getComponent<TransformComponent>().position.x;
+                if(t<0)
+                {
+                    canMoveLeft = true;
                     break;
-                     case SDLK_s:
-                         {
-                            std::list<Tile>::iterator it;
-                            for(it = tiles.begin(); it!=tiles.end(); ++it)
-                            {
-                                int t = it->getComponent<TransformComponent>().position.y;
-                                if(t>450){canMoveDown = true; break;}
-                            }
-                        if(canMoveDown == true ){moveTilesDown(1);}
-                         }
+                }
+            }
+            if(canMoveLeft ==true )
+            {
+                moveTilesLeft(1);
+            }
+        }
+        break;
+        case SDLK_s:
+        {
+            std::list<Tile>::iterator it;
+            for(it = tiles.begin(); it!=tiles.end(); ++it)
+            {
+                int t = it->getComponent<TransformComponent>().position.y;
+                if(t>450)
+                {
+                    canMoveDown = true;
                     break;
-                     case SDLK_d:
-                            {
-                            std::list<Tile>::iterator it;
-                            for(it = tiles.begin(); it!=tiles.end(); ++it)
-                            {
-                                int t = it->getComponent<TransformComponent>().position.x;
-                                if(t>450){canMoveRight = true; break;}
-                            }
-                        if(canMoveRight == true ){moveTilesRight(1);}
-                         }
+                }
+            }
+            if(canMoveDown == true )
+            {
+                moveTilesDown(1);
+            }
+        }
+        break;
+        case SDLK_d:
+        {
+            std::list<Tile>::iterator it;
+            for(it = tiles.begin(); it!=tiles.end(); ++it)
+            {
+                int t = it->getComponent<TransformComponent>().position.x;
+                if(t>450)
+                {
+                    canMoveRight = true;
                     break;
-                    }
+                }
+            }
+            if(canMoveRight == true )
+            {
+                moveTilesRight(1);
+            }
+        }
+        break;
+        }
     }
 }
 
 void Map::updateTile()
 {
 
-     std::list<Tile>::iterator it;
+    std::list<Tile>::iterator it;
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         it->update();
@@ -154,9 +188,10 @@ void Map::updateTile()
 
 }
 
-void Map::moveTilesUp(int distanceUp){
+void Map::moveTilesUp(int distanceUp)
+{
 
-     std::list<Tile>::iterator it;
+    std::list<Tile>::iterator it;
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         int height= it->getH();
@@ -164,9 +199,10 @@ void Map::moveTilesUp(int distanceUp){
     }
 }
 
-void Map::moveTilesDown(int distanceDown){
-     std::list<Tile>::iterator it;
-     std::vector<PlayerCharacter>::iterator pit;
+void Map::moveTilesDown(int distanceDown)
+{
+    std::list<Tile>::iterator it;
+    std::vector<PlayerCharacter>::iterator pit;
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         int height= it->getH();
@@ -180,8 +216,9 @@ void Map::moveTilesDown(int distanceDown){
     //}
 }
 
-void Map::moveTilesRight(int distanceRight){
-     std::list<Tile>::iterator it;
+void Map::moveTilesRight(int distanceRight)
+{
+    std::list<Tile>::iterator it;
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         int width= it->getW();
@@ -189,7 +226,8 @@ void Map::moveTilesRight(int distanceRight){
     }
 }
 
-void Map::moveTilesLeft(int distanceLeft){
+void Map::moveTilesLeft(int distanceLeft)
+{
     std::list<Tile>::iterator it;
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {

@@ -57,31 +57,31 @@ GameState::GameState(MenuScreen* menu,int Level)
         Rosey = 0;
         break;
     }
-      vector<Vector2D> positionsUsed;
-       for(int i = 0; i < 10; i++)
-       {
-           int randx =(rand()%(rows))+(-(rows-10));
-           int randy =(rand()%(columns)+(-(columns-10)));
-           int enemyx = randx *50;
-           int enemyy = randy*50;
-           for(int i=0; i < positionsUsed.size(); i++)
-           {
-               if(enemyx == positionsUsed[i].x && enemyy == positionsUsed[i].y)
-               {
-                   i=0;
-                   randx =(rand()%rows+(-10));
-                   randy =(rand()%columns+(-10));
-                   enemyx = randx *50;
-                   enemyy = randy*50;
-               }
-           }
-           positionsUsed.push_back(Vector2D(enemyx,enemyy));
-           EnemyCharacter slime;
-           slime.init("Slime",MALE,"assets/images/sprites/enemy.png","",enemyx,enemyy,200,200,50,50);
-           slime.setMap(this->currentMap);
-           enemies.push_back(slime);
+    vector<Vector2D> positionsUsed;
+    for(int i = 0; i < 10; i++)
+    {
+        int randx =(rand()%(rows))+(-(rows-10));
+        int randy =(rand()%(columns)+(-(columns-10)));
+        int enemyx = randx *50;
+        int enemyy = randy*50;
+        for(int i=0; i < positionsUsed.size(); i++)
+        {
+            if(enemyx == positionsUsed[i].x && enemyy == positionsUsed[i].y)
+            {
+                i=0;
+                randx =(rand()%rows+(-10));
+                randy =(rand()%columns+(-10));
+                enemyx = randx *50;
+                enemyy = randy*50;
+            }
+        }
+        positionsUsed.push_back(Vector2D(enemyx,enemyy));
+        EnemyCharacter slime;
+        slime.init("Slime",MALE,"assets/images/sprites/enemy.png","",enemyx,enemyy,200,200,50,50);
+        slime.setMap(this->currentMap);
+        enemies.push_back(slime);
 
-       }
+    }
     EnemyCharacter slime2;
     slime2.init("Le Slime",MALE,"assets/images/sprites/enemy.png","",Rosex+50,Rosey+50,200,200,50,50);
     slime2.setMap(this->currentMap);
@@ -94,11 +94,11 @@ GameState::GameState(MenuScreen* menu,int Level)
     goodGuys.push_back(Ahri);
     goodGuys.push_back(Rose);
     this->NumberOfEnemies = enemies.size();
-            for(int i=0; i < goodGuys.size(); i++)
-        {
-            goodGuys[i].reset();
-        }
-        PlayerCharacter::numberOfCharacterMoved=0;
+    for(int i=0; i < goodGuys.size(); i++)
+    {
+        goodGuys[i].reset();
+    }
+    PlayerCharacter::numberOfCharacterMoved=0;
 }
 /**
     Default Constructor

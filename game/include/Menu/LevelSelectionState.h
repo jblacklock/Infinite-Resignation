@@ -21,11 +21,11 @@ public:
     void resizeButton(kiss_button*,int,int,int,int);
 private:
     MenuScreen* menu;
-    kiss_button LBack ={0};
+    kiss_button LBack = {0};
     kiss_button Level1 = {0};
-    kiss_button Level2 ={0};
+    kiss_button Level2 = {0};
     kiss_button Level3 = {0};
-    kiss_button Level4 ={0};
+    kiss_button Level4 = {0};
     kiss_button Level5= {0};
     const int backWidth =100;
     const int backHeight = 50;

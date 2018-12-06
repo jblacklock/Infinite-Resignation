@@ -5,13 +5,13 @@
 
 class MapGenerator
 {
-    public:
-        static int determineColumns(int mapID);
-        static int determineRows(int mapID);
+public:
+    static int determineColumns(int mapID);
+    static int determineRows(int mapID);
 
-    protected:
+protected:
 
-    private:
+private:
 };
 
 #endif // MAPGENERATOR_H

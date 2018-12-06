@@ -20,8 +20,8 @@ private:
     void setCharacter(int);
     MenuScreen* menu;
     PlayerCharacter current;
-    kiss_button backButton ={0};
-    kiss_button previousButton ={0};
+    kiss_button backButton = {0};
+    kiss_button previousButton = {0};
     kiss_button nextButton = {0};
     kiss_label name = {0};
     kiss_label maxHP = {0};

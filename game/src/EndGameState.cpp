@@ -23,8 +23,8 @@ EndGameState::~EndGameState()
 */
 void EndGameState::update()
 {
-screen.update();
- double diag = sqrt(pow(WindowProperty::getHeightDisposition(),2) + pow(WindowProperty::getWidthDisposition(),2));
+    screen.update();
+    double diag = sqrt(pow(WindowProperty::getHeightDisposition(),2) + pow(WindowProperty::getWidthDisposition(),2));
     MainMenuButton.rect.h = 50*WindowProperty::getHeightDisposition();
     MainMenuButton.rect.w = 150*WindowProperty::getWidthDisposition();
     MainMenuButton.rect.x = 200*WindowProperty::getWidthDisposition();
@@ -38,7 +38,7 @@ screen.update();
 */
 void EndGameState::render()
 {
-screen.render();
+    screen.render();
     kiss_button_draw(&MainMenuButton, WindowProperty::renderer);
 }
 /**

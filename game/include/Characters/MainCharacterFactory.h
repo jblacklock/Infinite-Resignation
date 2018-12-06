@@ -4,7 +4,7 @@
 
 class MainCharacterFactory
 {
-    public:
+public:
         static PlayerCharacter createPlayableCharacter(int selection,int x,int y,int w,int h){
             PlayerCharacter newCharacter;
             switch(selection){

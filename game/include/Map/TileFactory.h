@@ -4,13 +4,13 @@
 
 class TileFactory
 {
-    public:
-        static Tile CreateTile( int tileType, int xPos, int yPos );
-        static std::string getTileName( int tileType );
+public:
+    static Tile CreateTile( int tileType, int xPos, int yPos );
+    static std::string getTileName( int tileType );
 
-    protected:
+protected:
 
-    private:
+private:
 };
 
 #endif // TILEFACTORY_H

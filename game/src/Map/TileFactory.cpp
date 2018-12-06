@@ -16,95 +16,96 @@ Tile TileFactory::CreateTile( int tileType, int xPos, int yPos )
 
     //q[i][j].init("assets/images/grass.bmp", xDisplacement, yDisplacement, xWidth, yHeight, 1000);
 
-    switch(tileType){
+    switch(tileType)
+    {
     case 1:
         tileName = "assets/images/BLpuddleEdge.bmp";
         weight = 1;
-    break;
+        break;
     case 2:
         tileName = "assets/images/BRpuddleEdge.bmp";
         weight = 1;
-    break;
+        break;
     case 3:
         tileName = "assets/images/grass.bmp";
         weight = 1;
-    break;
+        break;
     case 4:
         tileName = "assets/images/LRBpuddleEdge.bmp";
         weight = 1;
-    break;
+        break;
     case 5:
         tileName = "assets/images/LRTpuddleEdge.bmp";
         weight = 1;
-    break;
+        break;
     case 6:
         tileName = "assets/images/sand.bmp";
         weight = 1;
-    break;
+        break;
     case 7:
         tileName = "assets/images/sandGrass1.bmp";
         weight = 1;
-    break;
+        break;
     case 8:
         tileName = "assets/images/sandGrass2.bmp";
         weight = 1;
-    break;
+        break;
     case 9:
         tileName = "assets/images/sandGrass3.bmp";
         weight = 1;
-    break;
+        break;
     case 10:
         tileName = "assets/images/sandGrass4.bmp";
         weight = 1;
-    break;
+        break;
     case 11:
         tileName = "assets/images/sandGrass5.bmp";
         weight = 1;
-    break;
+        break;
     case 12:
         tileName = "assets/images/sandGrass6.bmp";
         weight = 1;
-    break;
+        break;
     case 13:
         tileName = "assets/images/sandGrass7.bmp";
         weight = 1;
-    break;
+        break;
     case 14:
         tileName = "assets/images/sandGrass8.bmp";
         weight = 1;
-    break;
+        break;
     case 15:
         tileName = "assets/images/sandGrass9.bmp";
         weight = 1;
-    break;
+        break;
     case 16:
         tileName = "assets/images/sandGrass10.bmp";
         weight = 1;
-    break;
+        break;
     case 17:
         tileName = "assets/images/sandGrass11.bmp";
         weight = 1;
-    break;
+        break;
     case 18:
         tileName = "assets/images/TBpuddleEdge.bmp";
         weight = 1;
-    break;
+        break;
     case 19:
         tileName = "assets/images/TBRpuddleEdge.bmp";
         weight = 1;
-    break;
+        break;
     case 20:
         tileName = "assets/images/TLpuddleEdge.bmp";
         weight = 1;
-    break;
+        break;
     case 21:
         tileName = "assets/images/TRpuddleEdge.bmp";
         weight = 1;
-    break;
+        break;
     case 22:
         tileName = "assets/images/water.bmp";
         weight = 1;
-    break;
+        break;
     }
 
     //currentTile.init(tileName, xPos, yPos, xWidth, yHeight, weight);
@@ -113,76 +114,78 @@ Tile TileFactory::CreateTile( int tileType, int xPos, int yPos )
 }
 
 
-std::string TileFactory::getTileName( int tileType ){
+std::string TileFactory::getTileName( int tileType )
+{
     int weight;
     std::string tileName;
-    switch(tileType){
+    switch(tileType)
+    {
     case 1:
         tileName = "assets/images/BLpuddleEdge.bmp";
-    break;
+        break;
     case 2:
         tileName = "assets/images/BRpuddleEdge.bmp";
-    break;
+        break;
     case 3:
         tileName = "assets/images/grass.bmp";
-    break;
+        break;
     case 4:
         tileName = "assets/images/LRBpuddleEdge.bmp";
-    break;
+        break;
     case 5:
         tileName = "assets/images/LRTpuddleEdge.bmp";
-    break;
+        break;
     case 6:
         tileName = "assets/images/sand.bmp";
-    break;
+        break;
     case 7:
         tileName = "assets/images/sandGrass1.bmp";
-    break;
+        break;
     case 8:
         tileName = "assets/images/sandGrass2.bmp";
-    break;
+        break;
     case 9:
         tileName = "assets/images/sandGrass3.bmp";
-    break;
+        break;
     case 10:
         tileName = "assets/images/sandGrass4.bmp";
-    break;
+        break;
     case 11:
         tileName = "assets/images/sandGrass5.bmp";
-    break;
+        break;
     case 12:
         tileName = "assets/images/sandGrass6.bmp";
-    break;
+        break;
     case 13:
         tileName = "assets/images/sandGrass7.bmp";
-    break;
+        break;
     case 14:
         tileName = "assets/images/sandGrass8.bmp";
-    break;
+        break;
     case 15:
         tileName = "assets/images/sandGrass9.bmp";
-    break;
+        break;
     case 16:
         tileName = "assets/images/sandGrass10.bmp";
-    break;
+        break;
     case 17:
         tileName = "assets/images/sandGrass11.bmp";
-    break;
+        break;
     case 18:
         tileName = "assets/images/TBpuddleEdge.bmp";
-    break;
+        break;
     case 19:
         tileName = "assets/images/TBRpuddleEdge.bmp";
-    break;
+        break;
     case 20:
         tileName = "assets/images/TLpuddleEdge.bmp";
-    break;
+        break;
     case 21:
         tileName = "assets/images/TRpuddleEdge.bmp";
-    break;
+        break;
     case 22:
         tileName = "assets/images/water.bmp";
-    break;
+        break;
     }
     return tileName;
 }
