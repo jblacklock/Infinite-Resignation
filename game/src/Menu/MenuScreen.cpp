@@ -11,7 +11,7 @@ MenuScreen::~MenuScreen()
 */
 void MenuScreen::init()
 {
-    this->current = new GameState(this,3);//new MainState(this);
+    this->current = new MainState(this);
 }
 /**
     render the current state

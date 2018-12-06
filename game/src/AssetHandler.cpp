@@ -3,12 +3,15 @@
 //TODO:: Move this to header later
 #include "Menu/MenuScreen.h"
 MenuScreen menu;
+Media music;
 /**
     Initializes all Assets in the Game
 */
 void AssetHandler::init()
 {
     menu.init();
+    music.init("assets/audio/backdrop.mp3");
+    music.play();
 }
 /**
     Update function to call each asset's update function

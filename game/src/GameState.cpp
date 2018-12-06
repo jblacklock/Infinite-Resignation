@@ -57,31 +57,31 @@ GameState::GameState(MenuScreen* menu,int Level)
         Rosey = 0;
         break;
     }
-    vector<Vector2D> positionsUsed;
-    for(int i = 0; i < 10; i++)
-    {
-        int randx =(rand()%(rows-10)+(-10));
-        int randy =(rand()%(columns-10)+(-10));
-        int enemyx = randx *50;
-        int enemyy = randy*50;
-        for(int i=0; i < positionsUsed.size(); i++)
-        {
-            if(enemyx == positionsUsed[i].x && enemyy == positionsUsed[i].y)
-            {
-                i=0;
-                randx =(rand()%rows+(-10));
-                randy =(rand()%columns+(-10));
-                enemyx = randx *50;
-                enemyy = randy*50;
-            }
-        }
-        positionsUsed.push_back(Vector2D(enemyx,enemyy));
-        EnemyCharacter slime;
-        slime.init("Slime",MALE,"assets/images/sprites/enemy.png","",enemyx,enemyy,200,200,50,50);
-        slime.setMap(this->currentMap);
-        enemies.push_back(slime);
+      vector<Vector2D> positionsUsed;
+       for(int i = 0; i < 10; i++)
+       {
+           int randx =(rand()%(rows))+(-(rows-10));
+           int randy =(rand()%(columns)+(-(columns-10)));
+           int enemyx = randx *50;
+           int enemyy = randy*50;
+           for(int i=0; i < positionsUsed.size(); i++)
+           {
+               if(enemyx == positionsUsed[i].x && enemyy == positionsUsed[i].y)
+               {
+                   i=0;
+                   randx =(rand()%rows+(-10));
+                   randy =(rand()%columns+(-10));
+                   enemyx = randx *50;
+                   enemyy = randy*50;
+               }
+           }
+           positionsUsed.push_back(Vector2D(enemyx,enemyy));
+           EnemyCharacter slime;
+           slime.init("Slime",MALE,"assets/images/sprites/enemy.png","",enemyx,enemyy,200,200,50,50);
+           slime.setMap(this->currentMap);
+           enemies.push_back(slime);
 
-    }
+       }
     EnemyCharacter slime2;
     slime2.init("Le Slime",MALE,"assets/images/sprites/enemy.png","",Rosex+50,Rosey+50,200,200,50,50);
     slime2.setMap(this->currentMap);
@@ -93,6 +93,12 @@ GameState::GameState(MenuScreen* menu,int Level)
     Rose.setMap(this->currentMap);
     goodGuys.push_back(Ahri);
     goodGuys.push_back(Rose);
+    this->NumberOfEnemies = enemies.size();
+            for(int i=0; i < goodGuys.size(); i++)
+        {
+            goodGuys[i].reset();
+        }
+        PlayerCharacter::numberOfCharacterMoved=0;
 }
 /**
     Default Constructor
@@ -124,8 +130,21 @@ void GameState::update()
     EnemyCharacter::playerPositions = playerPositions;
     if(PlayerCharacter::checkPlayerTurnEnd())
     {
-        for(int i = 0; i< enemies.size(); i++){
-            enemies[i].moveCloser();
+        std::list<EnemyCharacter>::iterator it;
+        for (it = enemies.begin(); it != enemies.end(); ++it)
+        {
+            it->moveCloser();
+            it->attackPlayer();
+            for(int i=0; i < goodGuys.size(); i++)
+            {
+                if(EnemyCharacter::attackX == goodGuys[i].getPosition().x &&
+                        EnemyCharacter::attackY == goodGuys[i].getPosition().y)
+                {
+                    goodGuys[i].takeDamage(it->attackPlayer());
+                    EnemyCharacter::attackX = -1;
+                    EnemyCharacter::attackY = -1;
+                }
+            }
         }
         for(int i=0; i < goodGuys.size(); i++)
         {
@@ -133,24 +152,23 @@ void GameState::update()
         }
     }
 
-    for(int i=0; i < enemies.size(); i++)
+    std::list<EnemyCharacter>::iterator it;
+    for (it = enemies.begin(); it != enemies.end(); ++it)
     {
-        enemies[i].update();
-        enemyPositions.push_back(enemies[i].getPosition());
-        if(PlayerCharacter::attackX == enemies[i].getPosition().x &&
-                PlayerCharacter::attackY == enemies[i].getPosition().y)
+        it->update();
+        enemyPositions.push_back(it->getPosition());
+        if(PlayerCharacter::attackX == it->getPosition().x &&
+                PlayerCharacter::attackY == it->getPosition().y)
         {
 
             for(int j=0; j < goodGuys.size(); j++)
             {
                 if(strcmp(PlayerCharacter::attackCharacterTurn,goodGuys[j].getName())==0)
                 {
-                    if(enemies[i].attacked(goodGuys[j].attackEnemy()))
+                    if(it->attacked(goodGuys[j].attackEnemy()))
                     {
-                        printf("NUMBER OF ENEMIES:%d",enemies.size());
-                        printf("%s Slain %s\n",goodGuys[j].getName(),enemies[i].getName());
-                        enemies.erase(enemies.begin()+i);
-                        printf("NUMBER OF ENEMIES:%d",enemies.size());
+                        printf("%s Slain %s\n",goodGuys[j].getName(),it->getName());
+                        this->NumberOfEnemies--;
                     }
                 }
             }
@@ -158,6 +176,10 @@ void GameState::update()
     }
     PlayerCharacter::enemyPositions = enemyPositions;
     EnemyCharacter::enemyPositions = enemyPositions;
+    if(this->NumberOfEnemies ==0)
+    {
+        this->menu->changeState(new EndGameState(this->menu));
+    }
 }
 /**
     Displays the tiles on given position
@@ -170,9 +192,10 @@ void GameState::render()
         goodGuys[i].render();
     }
 
-    for(int i=0; i < enemies.size(); i++)
+    std::list<EnemyCharacter>::iterator it;
+    for (it = enemies.begin(); it != enemies.end(); ++it)
     {
-        enemies[i].render();
+        it->render();
     }
 }
 /**
@@ -189,9 +212,10 @@ void GameState::handleEvent()
     {
         goodGuys[i].handleEvent();
     }
-    for(int i=0; i < enemies.size(); i++)
+    std::list<EnemyCharacter>::iterator it;
+    for (it = enemies.begin(); it != enemies.end(); ++it)
     {
-        enemies[i].handleEvent();
+        it->handleEvent();
     }
     currentMap->resetListener();
 }

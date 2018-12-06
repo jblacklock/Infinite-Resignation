@@ -22,9 +22,11 @@ class EnemyCharacter : public Character
         void handleEvent();
         void setDefault();
         void moveCloser();
+        int attackPlayer();
         bool attacked(int value);
         static vector<Vector2D> playerPositions;
         static vector<Vector2D> enemyPositions;
+        static int attackX,attackY;
     private:
         int moveX,moveY;
         bool dead;

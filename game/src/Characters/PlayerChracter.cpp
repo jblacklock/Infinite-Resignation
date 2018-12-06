@@ -161,7 +161,8 @@ void PlayerCharacter::handleEvent()
             {
                 this->showMove = !showMove;
                 this->showOptions = !showMove;
-                if(!this->showOptions) this->showAttack=false;
+                if(!this->showOptions)
+                    this->showAttack=false;
                 PlayerCharacter::characterInFocus = this->name;
                 this->checkClick = true;
             }
@@ -174,9 +175,9 @@ void PlayerCharacter::handleEvent()
         {
             if(!this->checkClick)
             {
-            this->showOptions = !this->showOptions;
-            PlayerCharacter::characterInFocus = this->name;
-            this->checkClick = true;
+                this->showOptions = !this->showOptions;
+                PlayerCharacter::characterInFocus = this->name;
+                this->checkClick = true;
             }
         }
         if(showMove)
@@ -389,5 +390,11 @@ int PlayerCharacter::attackEnemy()
 {
     this->endTheCharacterTurn();
     return this->getStrength();
+
+}
+void PlayerCharacter::takeDamage(int value)
+{
+    this->attributes.hp -=value;
+    printf("%s took %d damage, has %d life left\n", this->name, value, this->attributes.hp);
 
 }

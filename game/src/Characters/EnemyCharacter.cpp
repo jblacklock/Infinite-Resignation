@@ -1,6 +1,9 @@
 #include "EnemyCharacter.h"
 vector<Vector2D> EnemyCharacter::playerPositions;
 vector<Vector2D> EnemyCharacter::enemyPositions;
+int EnemyCharacter::attackX = -1;
+int EnemyCharacter::attackY = -1;
+
 void EnemyCharacter::init(char* name,Gender gender,char* sprite,char* character,int x,int y, int w, int h,int SW, int SH)
 {
     this->name = name;
@@ -25,13 +28,13 @@ EnemyCharacter::~EnemyCharacter()
 void EnemyCharacter::render()
 {
     if(!dead)
-    GameObject::render();
+        GameObject::render();
 }
 
 void EnemyCharacter::update()
 {
     if(!dead)
-    GameObject::update();
+        GameObject::update();
 }
 void EnemyCharacter::handleEvent()
 {
@@ -126,24 +129,57 @@ bool EnemyCharacter::attacked(int value)
     }
     return false;
 }
+
+int EnemyCharacter::attackPlayer()
+{
+    for(int i=0; i< playerPositions.size()&&!dead; i++)
+    {
+        if(this->x+50 == playerPositions[i].x && this->y == playerPositions[i].y)
+        {
+            EnemyCharacter::attackX = playerPositions[i].x;
+            EnemyCharacter::attackY = playerPositions[i].y;
+        }
+        if(this->x-50 == playerPositions[i].x && this->y == playerPositions[i].y)
+        {
+            EnemyCharacter::attackX = playerPositions[i].x;
+            EnemyCharacter::attackY = playerPositions[i].y;
+        }
+        if(this->x == playerPositions[i].x && this->y-50 == playerPositions[i].y)
+        {
+            EnemyCharacter::attackX = playerPositions[i].x;
+            EnemyCharacter::attackY = playerPositions[i].y;
+        }
+        if(this->x == playerPositions[i].x && this->y+50 == playerPositions[i].y)
+        {
+            EnemyCharacter::attackX = playerPositions[i].x;
+            EnemyCharacter::attackY = playerPositions[i].y;
+        }
+    }
+
+    return this->attributes.strength;
+}
 void EnemyCharacter::moveCloser()
 {
     bool L =true,R=true,U=true,D=true, nextTo=false;
     for(int i=0; i< playerPositions.size(); i++)
     {
-        if(this->x+50 == playerPositions[i].x && this->y == playerPositions[i].y){
+        if(this->x+50 == playerPositions[i].x && this->y == playerPositions[i].y)
+        {
             R= false;
             nextTo=true;
         }
-        if(this->x-50 == playerPositions[i].x && this->y == playerPositions[i].y){
+        if(this->x-50 == playerPositions[i].x && this->y == playerPositions[i].y)
+        {
             L= false;
             nextTo=true;
         }
-        if(this->x == playerPositions[i].x && this->y-50 == playerPositions[i].y){
+        if(this->x == playerPositions[i].x && this->y-50 == playerPositions[i].y)
+        {
             U= false;
             nextTo=true;
         }
-        if(this->x == playerPositions[i].x && this->y+50 == playerPositions[i].y){
+        if(this->x == playerPositions[i].x && this->y+50 == playerPositions[i].y)
+        {
             D= false;
             nextTo=true;
         }
@@ -164,30 +200,31 @@ void EnemyCharacter::moveCloser()
     {
         if(abs(playerPositions[i].x-(x)) < abs(closestPlayer.x-(x)) &&
                 abs(playerPositions[i].y-(y)) < abs(closestPlayer.y-(y))
-          ){
+          )
+        {
             closestPlayer.x = playerPositions[i].x;
-        closestPlayer.y = playerPositions[i].y;
+            closestPlayer.y = playerPositions[i].y;
         }
     }
     if(this->x > closestPlayer.x && L)
     {
-        x-=50;
+        this->x-=50;
         moveX = -1;
     }
     else if(this->x <closestPlayer.x && R)
     {
-        x+=50;
+        this->x+=50;
         moveX = 1;
     }
     else if(this->y > closestPlayer.y && U)
     {
-        y-=50;
+        this->y-=50;
         moveY = -1;
     }
     else if(this->y < closestPlayer.y && D)
     {
-        y+=50;
-        moveY = +1;
+        this->y+=50;
+        moveY = 1;
     }
 
 }

@@ -26,6 +26,7 @@ class PlayerCharacter : public Character
         void endTheCharacterTurn();
         void showTileAttack();
         int attackEnemy();
+        void takeDamage(int value);
         static bool checkPlayerTurnEnd();
         static int numberOfCharacters;
         static int numberOfCharacterMoved;
@@ -37,7 +38,7 @@ class PlayerCharacter : public Character
         static vector<Vector2D> enemyPositions;
     private:
         SDL_Rect moveSpaces[12];
-        bool showMove,showOptions,checkClick,canAttack,showAttack,moveEnd,turnEnd;
+        bool dead,showMove,showOptions,checkClick,canAttack,showAttack,moveEnd,turnEnd;
         int moveX,moveY;
 
 };
