@@ -32,7 +32,7 @@ class GameObject
             entityHandler.destroyAll();
         }
         virtual void update(){
-            //manager.refresh();
+            manager.refresh();
             entityHandler.update();
         };
         virtual void render(){

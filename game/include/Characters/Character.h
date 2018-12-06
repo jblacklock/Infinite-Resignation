@@ -35,6 +35,7 @@ class Character : public GameObject
         char* getName(){return this->name;}
         void setCoordinates(int x,int y){this->x=x;this->y=y;}
         void setMap(Map* m){this->m = m;};
+        Vector2D getPosition(){return this->getComponent<TransformComponent>().position;}
     protected:
         char* name;
         Gender gender;

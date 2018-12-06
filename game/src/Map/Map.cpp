@@ -190,7 +190,7 @@ void Map::moveTilesRight(int distanceRight){
 }
 
 void Map::moveTilesLeft(int distanceLeft){
-     std::list<Tile>::iterator it;
+    std::list<Tile>::iterator it;
     for(it = tiles.begin(); it!=tiles.end(); ++it)
     {
         int width= it->getW();

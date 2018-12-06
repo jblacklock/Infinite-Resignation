@@ -9,6 +9,8 @@
 #include "Map/MapGenerator.h"
 #include "Map/Map.h"
 #include "PlayerCharacter.h"
+#include "EnemyCharacter.h"
+#include "EndGameState.h"
 class MenuScreen;
 class GameState : public MenuState
 {
@@ -22,6 +24,8 @@ private:
     MenuScreen* menu;
     Map* currentMap;
     vector<PlayerCharacter> goodGuys;
+    list<EnemyCharacter> enemies;
+    int NumberOfEnemies;
 
 };
 
